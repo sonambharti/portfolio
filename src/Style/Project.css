@@ -1,0 +1,34 @@
+.experiment {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.experiment img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+}
+
+.exper-text {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.project-links {
+    margin-bottom: 10px;
+}
+
+.tools {
+    margin-top: 10px;
+}
+
+.tool {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-right: 5px;
+}

@@ -1,0 +1,32 @@
+/* Components/Preloader.css */
+body, html {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+    z-index: 9999; /* Ensure it covers everything */
+  }
+  
+
+  
+.preloader video {
+  /* width: 100%; /* Make video take full width */
+  /* height: 100%; Make video take full height */ 
+  /* object-fit: cover; Ensure the video covers the area without distortion */ 
+  border: none; /* Remove any border */
+}
+
+.preloader img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}

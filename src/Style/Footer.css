@@ -1,0 +1,56 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34; /* Footer background color */
+    color: white; /* Footer text color */
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    /* width: 100%; */
+    flex-wrap: wrap; 
+}
+
+
+.left {
+    margin-left: 40px; /* Add left margin to the left div */
+}
+
+.right {
+    margin-right: 40px; /* Add right margin to the right div */
+}
+
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 5px 0;
+    display: block; /* Ensures each item is on a new line */
+
+}
+
+.footer a {
+    color: #c2e4ea; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* Makes the anchor tag a block element */
+    padding: 5px 0; /* Adds some padding for better spacing */
+}
+
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer p {
+    width: 100%; /* Make the paragraph take the full width */
+    text-align: center; /* Center the text */
+    margin: 10px 0 0; /* Add margin to the top */
+    font-size: 1.2em; /* Adjust font size for the footer text */
+}

@@ -1,0 +1,52 @@
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.contact-me-form {
+    background-color: #fff; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    transition: transform 0.3s, border 0.3s; /* Transition for zoom and border */
+    border: 1px solid transparent; /* Initial border */
+}
+
+.contact-me-form:hover {
+    transform: scale(1.05); /* Zoom out effect on hover */
+    border: 1px solid #007BFF; /* Highlighted border color on hover */
+}
+
+.contact-me-form span {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.contact-me-form label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.contact-me-form input,
+.contact-me-form textarea {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    font-size: 16px; /* Font size for input fields */
+}
+
+.contact-me-form button {
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    padding: 10px 15px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.contact-me-form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
