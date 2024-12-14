@@ -37,7 +37,7 @@ h1 {
 }
 
 
-.about-list li {
+.about-list span {
     display: flex; /* Align items in a row */
     align-items: center; /* Center items vertically */
     margin: 10px 0; /* Space between list items */

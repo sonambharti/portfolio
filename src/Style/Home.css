@@ -39,7 +39,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.home-text h2 {
+.typewriter h2 {
     font-size: 5.5em; /* Make it bigger */
     /* background: linear-gradient(90deg, #6a11cb, #2575fc); Gradient color */
     /* background: linear-gradient(90deg, #40e0d0, #84898a); */
@@ -55,13 +55,14 @@
     top: 0;
 }
 
-.typewriter {
+.typewriter #full-name {
+    margin: 0 auto;
     overflow: hidden; /* Hide overflow */
     white-space: nowrap; /* Prevent wrapping */
+    letter-spacing: 0.075em;
     /* border-right: 2px solid black; Cursor effect */
-    width: 50; /*Start with width 0 */
-    /* left: 50%; */
-    animation: typing 4s steps(12) forwards, blink-caret 0.75s step-end infinite; /* Typewriter and blinking cursor*/
+    animation: typing 8s steps(26, end);
+    /* animation: typing 3s steps(12) forwards, blink-caret 0.75s step-end infinite; Typewriter and blinking cursor*/ 
 }
 
 
@@ -113,12 +114,5 @@ interest{
     to {
         width: 100%; /* Expand to full width */
     }
-}
+} 
 
-
-@keyframes blink-caret {
-    50% { 
-        border-color: transparent; /* Blink effect */
-    }
-}
-   

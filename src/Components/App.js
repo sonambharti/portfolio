@@ -12,20 +12,20 @@ import Skills from './Skills.js';
 import Project from './Project.js';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate a loading delay
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Change this duration as needed
+  // useEffect(() => {
+  //   // Simulate a loading delay
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3000); // Change this duration as needed
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  if (loading) {
-    return <Preloader />;
-  }
+  // if (loading) {
+  //   return <Preloader />;
+  // }
   
   return (
     <div className="App">

@@ -46,7 +46,9 @@ export default function Home() {
                 {/* <span style={{display:'flex'}}><h1>Hi!</h1><img src={Waving} alt=' ' style={{width:'50px', height:'auto'}}/></span> */}
                 <h3 style={{fontSize: "50px", bottom:'0px', top:'0px'}}>I'm</h3>
                 {/* <h2>{typedText}</h2> */}
-                <h2 className="typewriter" style={{bottom:'0px', top:'0px'}}>{fullName}</h2>
+                <div className="typewriter" style={{bottom:'0px', top:'0px'}}>
+                    <h2 id='full-name'>{fullName}</h2>
+                </div>
                 <p className="sw" style={{fontSize:"1.5rem"}}>A Software Engineer having interest in ...</p>
                 <p className="interest" >
                     {interests[currentInterest]}

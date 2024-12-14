@@ -22,20 +22,28 @@ export default function About() {
                     </p>
                     <ul className='about-list'>
                         <li>
-                            <span>Contributing on Python, React and AI projects</span>
-                            <img src={coding} alt='Coding GIF' />
+                            <span>
+                                <p>Contributing on Python, React and AI projects</p>
+                                <img src={coding} alt='Coding GIF' />
+                            </span>
                         </li>
                         <li>
-                            <span>Exploring new technologies</span>
-                            <img src={eating} alt='Eating GIF' />
+                            <span>
+                                <p>Exploring new technologies</p>
+                                <img src={eating} alt='Eating GIF' />
+                            </span>
                         </li>
                         <li>
-                            <span>Balancing work and relaxation</span>
-                            <img src={sleepNCode} alt='Sleep and Code GIF' />
+                            <span>
+                                <p>Balancing work and relaxation</p>
+                                <img src={sleepNCode} alt='Sleep and Code GIF' />
+                            </span>
                         </li>
                         <li>
-                            <span>Looking for opportunities</span>
-                            <img src={coding} alt='Code GIF' />
+                            <span>
+                                <p>Looking for opportunities</p>
+                                <img src={coding} alt='Code GIF' />
+                            </span>
                         </li>
                     </ul>
                 </div>
