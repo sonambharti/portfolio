@@ -12,7 +12,7 @@ function Experiment({ project }) {
 
     return (
         <div className='experiment'>
-            <img src={`../image/projImage/${project.imgUrl}`} alt={project.name} />
+            <img src={`projImage/${project.imgUrl}`} alt={project.name} />
             <div className="exper-text">
                 <h2 id="proj-name">{project.name}</h2>
                 <div className="project-links">

@@ -24,7 +24,6 @@ h1 {
 .about-text {
     max-width: 600px; /* Limit the width for better readability */
     margin: 0 auto; /* Center the content */
-    text-align: left; /* Align text to the left */
     background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a white background with transparency */
     padding: 20px;
     border-radius: 8px; /* Optional: Rounded corners */
@@ -39,7 +38,6 @@ h1 {
 
 .about-list span {
     display: flex; /* Align items in a row */
-    align-items: center; /* Center items vertically */
     margin: 10px 0; /* Space between list items */
 }
 
