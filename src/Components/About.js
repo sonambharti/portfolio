@@ -49,7 +49,7 @@ export default function About() {
                 </div>
             </div>
             <div className='about-image'>
-
+                <img id='myself' src='icon.png' alt='myself'/>
             </div>
         </div>
     )

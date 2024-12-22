@@ -1,15 +1,21 @@
 .about-component {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* font-style: oblique; */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between the columns */
+    padding: 50px; /* Optional padding around the grid */
+    align-items: center; /* Center items vertically in the grid */
 
 }
 .about {
     /* background-image: url('../image/background.jpg');  Add your background image path */
     /*background-size: cover;
     background-position: center; */
-    padding: 20px;
     color: #333; /* Adjust text color for better contrast */
-    background-color: rgba(255, 255, 255, 0.8); /* Lighter background than home page */
+    /* background-color: #f9f9f9; Light background for contrast */
+    padding: 20px; /* Padding inside the about section */
+    border-radius: 8px; /* Rounded corners */
 }
 
 
@@ -45,4 +51,23 @@ h1 {
     width: 50px; /* Set a fixed width for the GIFs */
     height: auto; /* Maintain aspect ratio */
     margin-left: 10px; /* Space between text and GIF */
+}
+
+.about-image {
+    width: 300px;
+    height: 380px;
+    border: 2px solid #0c0101;
+    display: flex; /* Flexbox for centering or aligning images */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    background-color: #eaeaea; /* Light background for contrast */
+    /* border-radius: 8px; Rounded corners */
+    margin-left: auto; /* Push the image to the right */
+    margin-right: auto;
+    
+}
+#myself {
+    width: 220px;
+    height: 320px;
+    border: 2px solid #0c0101;
 }

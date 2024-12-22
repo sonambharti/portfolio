@@ -16,28 +16,29 @@ function Experiment({ project }) {
             <div className="exper-text">
                 <h2 id="proj-name">{project.name}</h2>
                 <div className="project-links">
-                    {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    {project.GithubRepo && (
+                        <a href={project.GithubRepo} target="_blank" rel="noopener noreferrer">
                             <FaGithub /> GitHub
                         </a>
                     )}
-                    {project.demo && (
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                    {project.DemoLink && (
+                        <a href={project.DemoLink} target="_blank" rel="noopener noreferrer">
                             Demo
                         </a>
                     )}
                 </div>
-                {/* <p>
-                    {showMore ? project.details : `${project.details.substring(0, 100)}...`}
+                <p>
+                    {project.Work}
+                    {/* {showMore ? project.Work : `${project.Work.substring(0, 100)}...`}
                     <button onClick={toggleShowMore}>
                         {showMore ? 'Show Less' : 'Show More'}
-                    </button>
+                    </button> */}
                 </p>
                 <div className="tools">
-                    {project.tools.map((tool, index) => (
+                    {project.Tools.map((tool, index) => (
                         <span className="tool" key={index}>{tool}</span>
                     ))}
-                </div> */}
+                </div>
             </div>
         </div>
     );
