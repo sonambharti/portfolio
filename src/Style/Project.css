@@ -1,13 +1,22 @@
+.project {
+    align-items: center;
+    justify-content: center;
+    
+}
+
 .experiment {
     display: flex;
+    justify-content: center;
     border: 1px solid #ccc;
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
+    width: 70%;
+    overflow: auto; /* Clears floats */
 }
 
-.experiment img {
-    width: 150px; /* Adjust as needed */
+.projImage {
+    width: 200px; /* Adjust as needed */
     height: auto;
     border-radius: 8px;
 }
@@ -19,6 +28,18 @@
 
 .project-links {
     margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    color: rgb(199, 237, 224);
+}
+
+.project-links a{
+    color: rgb(46, 179, 200);
+}
+
+.project-links a:hover{
+    color: rgba(243, 19, 19, 0.941);
+    
 }
 
 .tools {

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Preloader from './Preloader.js';
+// import Preloader from './Preloader.js';
 import '../Style/App.css';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
+import { Link } from 'react-scroll';
 import Home from './Home';
 import About from './About';
 import Footer from './Footer';
@@ -29,14 +31,30 @@ export default function App() {
   
   return (
     <div className="App">
+      {/* <BrowserRouter>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/experience" element={<Experience />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/projects" element={<Project />} />
+                <Route path="/achievements" element={<Achievements />} />
+                <Route path="/extras" element={<Extras />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+        </BrowserRouter> */}
       <Navbar />
-      <Home />
-      <About />
-      <Education />
-      <Experience />
-      <Skills />
-      <Project />
-      <Contact />
+      <div id="home"><Home /></div>
+      <div id="about"><About /></div>
+      {/* <Home />
+      <About /> */}
+      <div id='education'><Education /></div>
+      {/* <Experience /> */}
+      <div id="experience"><Experience /></div>
+      <div id="skills"><Skills /></div>
+      <div id="project"><Project /></div>
+      <div id="contact"><Contact /></div>
       <Footer />
     </div>
   );

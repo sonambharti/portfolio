@@ -1,15 +1,15 @@
 import '../Style/About.css';
 import coding from '../image/coding.gif';
-import eating from '../image/eating.gif';
-import sleepNCode from '../image/sleep-n-code.gif';
+import eating from '../image/eating-rbg.gif';
+import sleepNCode from '../image/sleep-n-code-rbg.gif';
 
 export default function About() {
     return (
         <div className="about-component">
             <div className="about">
-                <h1 className='heading'>💫 About Me (She/her)</h1>
+                <h1 className='heading' id='head'>About Me (She/her)</h1>
                 <div className='about-text'>
-                    <p className='para'>
+                    <p className='para' id='parag'>
                         I'm a passionate software🌈 and web🌐 developer🎯 from India 🚀
                         with a deep enthusiasm for Generative AI🤖, Blockchain🔗 and DevOps.
                         I hold an M.Tech in Computer Science from IIT Jammu and a B.Tech from 
@@ -49,7 +49,7 @@ export default function About() {
                 </div>
             </div>
             <div className='about-image'>
-                <img id='myself' src='icon.png' alt='myself'/>
+                <img id='myself' src='sdegree.jpg' alt='myself'/>
             </div>
         </div>
     )

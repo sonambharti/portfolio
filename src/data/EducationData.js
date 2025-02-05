@@ -22,7 +22,7 @@ const educationData = [
         'Degree': '12th BSEB Board',
         'PassingYear': 2016,
         'MarksFormat': 'Percent',
-        'Marks': '65%',
+        'Marks': '65.4%',
         'Specialization': 'Science (PCM)',
         'Location': 'Bihar'
     },

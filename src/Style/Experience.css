@@ -1,0 +1,125 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Main container for the experience section */
+.main-exps {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    color: #fff;
+    
+    /* background-color: #000; Optional, adjust as needed */
+  }
+  
+  /* Header styling */
+  .main-exps h1 {
+    text-align: center;
+    /* font-size: 2rem; */
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  /* Experience section container */
+  .experience {
+    position: relative;
+    margin-top: 2rem;
+  }
+  
+  /* Individual experience container */
+  .relative {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  
+  /* Icon container */
+  .icon {
+    position: absolute;
+    top: 0.5rem;
+    left: -2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #3b82f6, #9333ea);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  /* Vertical line */
+  .lines {
+    position: absolute;
+    left: -0.44rem;
+    top: 2rem;
+    width: 0.125rem;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b82f6, transparent);
+  }
+  
+  /* Experience details container */
+  .exp-details {
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Position title */
+  .exp-position {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Duration */
+  .duration {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  /* Organisation details */
+  .organisation {
+    margin-top: -1.3rem;
+    font-size: 1rem;
+    font-style: italic;
+    margin-left: 2rem;
+    color: #9ca3af;
+  }
+  
+  /* Experience points list */
+  .exp-points {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-left: 2rem;
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Tools container */
+  .tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  
+  /* Individual tool tag */
+  .tool {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    background-color: #1f2937;
+    color: #4b525c;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tool:hover {
+    background-color: #3b82f6;
+    color: #fff;
+  }
+  

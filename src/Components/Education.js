@@ -1,11 +1,11 @@
-import { useState } from "react";
 import '../Style/Education.css';
+// import Navbar from './Navbar';
 const {educationData} = require('../data/EducationData.js');
 
 
 function Degree({education, isLeft}){
     return (
-        <div className={`degree ${isLeft ? "left" : ""}`}>
+        <div className='degree'>
             <span>
                 <h2 id="deg">{education.Degree}</h2>
                 <p id="spec" style={{'fontStyle': 'italic'}}>{education.Specialization}</p>
@@ -19,18 +19,13 @@ function Degree({education, isLeft}){
     )
 }
 export default function Education (){
-    const [left, setLeft] = useState(false);
-    function handleIsLeft(){
-        setLeft((left) => !left);
-    }
-    // handleIsLeft();
     return (
         <div className="education">
             <h1>Qualifications</h1>
             <div className="edu">
                 {
                     educationData.map((education, indx) => (
-                        <Degree education={education} isLeft={left} isLeftFunc={handleIsLeft} key={indx} />
+                        <Degree education={education} key={indx} />
                     ))
                 }
             </div>
