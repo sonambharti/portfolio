@@ -1,12 +1,37 @@
+import { useEffect, useRef } from 'react';
 import '../Style/Experience.css';
 import { FaBriefcase, FaLaptopCode } from "react-icons/fa";
 const {expData} = require('../data/ExperienceData.js');
 
 function WorkExp({exp, index}) {
     const Icon = exp.icon === "FaBriefcase" ? FaBriefcase : FaLaptopCode;
-  
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
     return (
-        <div key={index} className="relative">
+        <div ref={ref} key={index} className="relative">
         <div className='icon'>
             <Icon />
         </div>
