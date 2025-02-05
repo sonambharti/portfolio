@@ -1,8 +1,8 @@
 .navbar {
     /* position: fixed; */
-    background-color: #333;
+    /* background-color: #333; */
     /* background-color: blanchedalmond; */
-    color: #fff;
+    color: aliceblue;
     padding: 1em;
     display: flex;
     /* justify-content: space-between; */
@@ -22,7 +22,7 @@
 }
 
 .navbar a {
-    color: #fff;
+    color: aliceblue;
     text-decoration: none;
     transition: color 0.2s ease;
 }

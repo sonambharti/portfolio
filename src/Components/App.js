@@ -3,14 +3,13 @@ import React, { useEffect, useState } from 'react';
 import '../Style/App.css';
 // import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
-import { Link } from 'react-scroll';
 import Home from './Home';
 import About from './About';
 import Footer from './Footer';
 import Contact from './Contact';
 import Education from './Education.js';
 import Experience from './Experience.js';
-import Skills from './Skills.js';
+// import Skills from './Skills.js';
 import Project from './Project.js';
 
 export default function App() {
@@ -52,7 +51,7 @@ export default function App() {
       <div id='education'><Education /></div>
       {/* <Experience /> */}
       <div id="experience"><Experience /></div>
-      <div id="skills"><Skills /></div>
+      {/* <div id="skills"><Skills /></div> */}
       <div id="project"><Project /></div>
       <div id="contact"><Contact /></div>
       <Footer />
