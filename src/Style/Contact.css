@@ -5,6 +5,14 @@
     margin: 20px;
 }
 
+.contact-head{
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .contact-me-form {
     background-color: #fff; /* Card background color */
     border-radius: 8px; /* Rounded corners */

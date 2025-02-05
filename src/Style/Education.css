@@ -1,41 +1,69 @@
 .education {
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    /* padding: 10px; */
+    padding: 20px;
+}
+
+.education .head {
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
 }
 
 .edu {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     position: relative;
+    gap: 10px; /* Reduced horizontal distance between cards */
 }
 
 .degree {
     width: 300px; /* Set a fixed width for the card */
-    margin: 20px;
+    margin: 10px; /* Reduced margin for closer spacing */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     background-color: white;
+    position: relative;
+    z-index: 1;
 }
 
 .degree:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) translateY(-10px) translateX(20px); /* Move on x-axis */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
+    border: 2px solid #00bfff; /* Outlined border */
+    z-index: 2;
 }
 
-.left {
+.degree:nth-child(odd):hover {
+    transform: rotate(-2deg) scale(1.1) translateY(-10px) translateX(20px); /* Move on x-axis */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
+    border: 2px solid #ff69b4; /* Outlined border */
+}
+
+.degree:nth-child(even):hover {
+    transform: rotate(2deg) scale(1.1) translateY(-10px) translateX(-20px); /* Move on x-axis */
+    box-shadow: 0 8px 16px rgba(0, 191, 255, 0.6), 0 0 20px rgba(255, 105, 180, 0.6); /* Bright color shadow */
+    border: 2px solid #00bfff; /* Outlined border */
+}
+
+.degree:nth-child(odd) {
     align-self: flex-start;
+    transform: rotate(-2deg);
+    margin-left: 200px;
+    /* margin-right: -50px; Reduce horizontal space for odd cards */
 }
 
-.right {
+.degree:nth-child(even) {
     align-self: flex-end;
+    transform: rotate(2deg);
+    margin-right: 200px;
+    /* margin-left: -50px; Reduce horizontal space for even cards */
 }
 
 .line {
@@ -46,13 +74,39 @@
     background-color: #ccc;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 0;
 }
 
-h1 {
-    
-    /* font-size: large; */
-    color: aquamarine;
+.deg {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 5px;
 }
-#deg {
-    font-size: larger;
+
+.deg-p {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+.deg-marks {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+#deg-id {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#spec {
+    font-style: italic;
+    color: #555;
+}
+
+#marks {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
 }

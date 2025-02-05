@@ -23,7 +23,7 @@ export default function Contact() {
     }
     return (
         <div className='contact-me'>
-            <h1>Contact Me</h1>
+            <h1 className='contact-head'>Contact Me</h1>
             <form className="contact-me-form" onSubmit={handleSubmit}>
                 <span>
                     <label for='email-id'>Email</label>

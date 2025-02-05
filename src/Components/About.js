@@ -7,7 +7,7 @@ export default function About() {
     return (
         <div className="about-component">
             <div className="about">
-                <h1 className='heading' id='head'>About Me (She/her)</h1>
+                <h1 className='about-head' id='head'>About Me (She/her)</h1>
                 <div className='about-text'>
                     <p className='para' id='parag'>
                         I'm a passionate software🌈 and web🌐 developer🎯 from India 🚀

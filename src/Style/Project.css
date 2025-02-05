@@ -1,50 +1,94 @@
-.project {
+/* General Styles */
+.proj-head {
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    
 }
 
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+}
+
+.pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Experiment Container */
 .experiment {
     display: flex;
-    justify-content: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 10px;
-    width: 70%;
-    overflow: auto; /* Clears floats */
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin: 20px 0;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    /* background-color: #fff; */
+    background: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.experiment:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
 .projImage {
-    width: 200px; /* Adjust as needed */
+    width: 250px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
+    margin: 0 20px;
 }
 
+/* Text Content Styles */
 .exper-text {
-    margin-left: 20px;
     flex: 1;
+    margin: 0 20px;
+}
+
+#proj-name {
+    /* color: #333; */
+    color: aliceblue;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
 .project-links {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
     gap: 20px;
-    color: rgb(199, 237, 224);
 }
 
-.project-links a{
-    color: rgb(46, 179, 200);
+.project-links a {
+    color: #17a2b8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.project-links a:hover{
-    /* color: rgba(243, 19, 19, 0.941); */
-    color: #ccc;
-    
+.project-links a:hover {
+    color: #ff6f61;
 }
 
 .tools {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .tool {
@@ -53,4 +97,38 @@
     border-radius: 15px;
     padding: 5px 10px;
     margin-right: 5px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Button Styles */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 6px;
+    color: #17a2b8;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+button:hover {
+    color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experiment {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .projImage {
+        margin: 20px 0;
+    }
+
+    .exper-text {
+        margin: 20px 0;
+    }
 }

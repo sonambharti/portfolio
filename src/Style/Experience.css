@@ -15,9 +15,13 @@
   /* Header styling */
   .main-exps h1 {
     text-align: center;
-    /* font-size: 2rem; */
-    font-weight: bold;
     margin-bottom: 2rem;
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
   }
   
   /* Experience section container */

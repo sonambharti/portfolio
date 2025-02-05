@@ -63,7 +63,7 @@ export default function Project() {
     
     return (
         <div className="project">
-            <h1>Projects I've Built</h1>
+            <h1 className="proj-head">Projects I've Built</h1>
             <div className="pro">
                 {projectData.map((project, indx) => (
                     <Experiment project={project} index={indx} key={indx} />
