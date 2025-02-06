@@ -176,3 +176,110 @@
       background-position: 0% 50%;
   }
 }
+
+/* Add this to your Experience.css */
+@media (max-width: 768px) {
+  /* Adjust the layout for smaller screens */
+
+  .main-exps {
+      padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .main-exps h1 {
+      font-size: 2rem; /* Reduce the font size for smaller screens */
+  }
+
+  .experience {
+      margin-top: 1rem; /* Adjust spacing for smaller screens */
+  }
+
+  .relative {
+      margin-bottom: 2rem; /* Reduce spacing between experience blocks */
+  }
+
+  .icon {
+      left: 0; /* Adjust icon positioning for smaller screens */
+      width: 2.5rem; /* Reduce size for smaller screens */
+      height: 2.5rem;
+  }
+
+  .lines {
+      left: 0; /* Adjust line positioning for smaller screens */
+  }
+
+  .exp-details {
+      flex-direction: column; /* Stack details vertically on smaller screens */
+      align-items: flex-start; /* Align to the left */
+  }
+
+  .exp-position {
+      font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+
+  .duration {
+      font-size: 0.8rem; /* Reduce font size for smaller screens */
+  }
+
+  .organisation {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+
+  .exp-points {
+      font-size: 0.8rem; /* Reduce font size for smaller screens */
+      margin-left: 1rem; /* Adjust spacing for smaller screens */
+  }
+
+  .tools {
+      gap: 0.3rem; /* Reduce spacing between tools for smaller screens */
+      margin-left: 1rem; /* Adjust spacing for smaller screens */
+  }
+
+  .tool {
+      padding: 0.3rem 0.8rem; /* Reduce padding for smaller screens */
+      font-size: 0.8rem; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+
+  .main-exps {
+      padding: 0.5rem; /* Reduce padding for very small screens */
+  }
+
+  .main-exps h1 {
+      font-size: 2rem; /* Reduce font size for very small screens */
+  }
+
+  .icon {
+      width: 2rem; /* Reduce size for very small screens */
+      height: 2rem;
+  }
+
+  .exp-position {
+      font-size: 1rem; /* Further reduce font size for very small screens */
+  }
+
+  .duration {
+      font-size: 0.7rem; /* Further reduce font size for very small screens */
+  }
+
+  .organisation {
+      font-size: 0.8rem; /* Further reduce font size for very small screens */
+  }
+
+  .exp-points {
+      font-size: 0.7rem; /* Further reduce font size for very small screens */
+      margin-left: 0.5rem; /* Adjust spacing for very small screens */
+  }
+
+  .tools {
+      gap: 0.2rem; /* Further reduce spacing for very small screens */
+      margin-left: 0.5rem; /* Adjust spacing for very small screens */
+  }
+
+  .tool {
+      padding: 0.2rem 0.5rem; /* Further reduce padding for very small screens */
+      font-size: 0.7rem; /* Further reduce font size for very small screens */
+  }
+}

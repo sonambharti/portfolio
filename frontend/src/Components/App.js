@@ -11,6 +11,7 @@ import Education from './Education.js';
 import Experience from './Experience.js';
 // import Skills from './Skills.js';
 import Project from './Project.js';
+import Achievement from './Achievement';
 
 export default function App() {
   // const [loading, setLoading] = useState(true);
@@ -53,6 +54,7 @@ export default function App() {
       <div id="experience"><Experience /></div>
       {/* <div id="skills"><Skills /></div> */}
       <div id="project"><Project /></div>
+      <div id="achievement"><Achievement /></div>
       <div id="contact"><Contact /></div>
       <Footer />
     </div>

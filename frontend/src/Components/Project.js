@@ -46,7 +46,7 @@ function Experiment({ project, index }) {
                 <p>
                     {/* {project.projectDetails} */}
                     <span>{isExpanded ? project.projectDetails : project.projectDetails.split(' ').slice(0, 12).join(' ') + "..."}</span>
-                    <button onClick={() => setIsExpanded((exp) => !exp)} style={buttonStyle}>{isExpanded ? 'Show Less': 'Show More'}</button>
+                    <button id='exp' onClick={() => setIsExpanded((exp) => !exp)} style={buttonStyle}>{isExpanded ? 'Show Less': 'Show More'}</button>
                 </p>
                 <div className="tools">
                     {project.Tools.map((tool, index) => (

@@ -8,12 +8,12 @@ function Degree({education, isLeft}){
         <div className='degree'>
             <span>
                 <h2 className='deg' id="deg-id">{education.Degree}</h2>
-                <p id="spec" style={{'fontStyle': 'italic'}}>{education.Specialization}</p>
+                <p className='deg-p' id="spec" style={{'fontStyle': 'italic'}}>{education.Specialization}</p>
                 <h3 className='deg-marks' id="marks">{education.MarksFormat === 'CGPA' ? education.Marks + '/10' : education.Marks}</h3>
             </span>
             <h2 className='deg'>{education.College}</h2>
             <h3 className='deg-marks'>{education.PassingYear}</h3>
-            <p>{education.Location}</p>
+            <p className='deg-p'>{education.Location}</p>
             
         </div>
     )

@@ -16,7 +16,7 @@ const expData = [
             'Deployed multiple Docker images on Kubernetes, utilizing CI/CD pipelines to reduce deployment delays by 15%-20%.',
         ],
         'Tools': ['Python', 'Flask', 'FastAPI', 'Javascript', 'Node JS', 'RESTful API', 'Linux', 'Mac', 'AWS', 'Docker', 'MongoDB', 'Redis', 'Kubernetes',
-            'Postman', 'Git', 'Github', 'Prompt Engineering', 'LLM', 'Langchain', 'GenerativeAI'],
+            'NGINX', 'Postman', 'Git', 'Github', 'Prompt Engineering', 'LLM', 'Langchain', 'GenerativeAI'],
         "icon": "FaBriefcase",
     },
     {

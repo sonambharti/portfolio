@@ -102,7 +102,7 @@
 }
 
 /* Button Styles */
-button {
+#exp {
     background: none;
     border: none;
     cursor: pointer;
@@ -111,10 +111,10 @@ button {
     font-weight: bold;
     transition: color 0.3s ease;
 }
-
+/* 
 button:hover {
     color: #ff6f61;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -130,5 +130,88 @@ button:hover {
 
     .exper-text {
         margin: 20px 0;
+    }
+}
+
+
+/* Responsive Design for Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .proj-head {
+        font-size: 2rem; /* Smaller font size for heading */
+    }
+
+    .experiment {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+        text-align: center;
+        width: 90%; /* Slightly wider for better use of space */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .projImage {
+        width: 80%; /* Make image responsive */
+        max-width: 300px; /* Limit maximum width */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .exper-text {
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    #proj-name {
+        font-size: 1.5rem; /* Smaller font size for project name */
+    }
+
+    .project-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce gap between links */
+    }
+
+    .tools {
+        display: flex;
+        flex-wrap: wrap; /* Wrap tools to next line if needed */
+        justify-content: center; /* Center tools */
+        gap: 5px; /* Reduce gap between tools */
+    }
+
+    .tool {
+        font-size: 0.8rem; /* Smaller font size for tools */
+        padding: 4px 8px; /* Adjust padding */
+    }
+
+    button {
+        font-size: 0.9rem; /* Smaller font size for button */
+    }
+}
+
+/* Responsive Design for Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .proj-head {
+        font-size: 1.8rem; /* Even smaller font size for heading */
+    }
+
+    .experiment {
+        width: 95%; /* Use almost full width */
+        padding: 10px; /* Reduce padding further */
+    }
+
+    .projImage {
+        width: 90%; /* Make image even wider */
+    }
+
+    #proj-name {
+        font-size: 1.3rem; /* Smaller font size for project name */
+    }
+
+    .project-links a {
+        font-size: 0.9rem; /* Smaller font size for links */
+    }
+
+    .tool {
+        font-size: 0.75rem; /* Smaller font size for tools */
+    }
+
+    button {
+        font-size: 0.8rem; /* Smaller font size for button */
     }
 }

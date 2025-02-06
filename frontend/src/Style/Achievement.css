@@ -1,0 +1,123 @@
+.achieve {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.achieve-head {
+    text-align: center;
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.achievement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.achievement-list:hover {
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
+    border: 2px solid #00bfff; /* Outlined border */
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    /* background-color: white; */
+    background: transparent;
+    border: 1px aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.achievement-item:nth-child(1) { animation-delay: 0.2s; }
+.achievement-item:nth-child(2) { animation-delay: 0.4s; }
+.achievement-item:nth-child(3) { animation-delay: 0.6s; }
+.achievement-item:nth-child(4) { animation-delay: 0.8s; }
+
+.trophy-icon {
+    color: #f1bc49;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+.achievement-text {
+    margin: 0;
+    font-size: 1.1rem;
+    /* color: #333; */
+    color: #9ca3af;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .achieve-head {
+        font-size: 2rem; /* Smaller font size for the heading */
+        letter-spacing: 1px; /* Reduce letter spacing */
+    }
+
+    .achievement-item {
+        flex-direction: column; /* Stack icon and text vertically */
+        text-align: center; /* Center-align text */
+        gap: 10px; /* Reduce gap between icon and text */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .trophy-icon {
+        font-size: 1.5rem; /* Smaller icon size */
+    }
+
+    .achievement-text {
+        font-size: 1rem; /* Smaller font size for text */
+    }
+}
+
+/* CSS for smaller screens */
+@media (max-width: 480px) {
+    .achieve-head {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    .achievement-item {
+        padding: 8px; /* Further reduce padding */
+    }
+
+    .trophy-icon {
+        font-size: 1.2rem; /* Smaller icon size */
+    }
+
+    .achievement-text {
+        font-size: 0.9rem; /* Smaller font size for text */
+    }
+}
