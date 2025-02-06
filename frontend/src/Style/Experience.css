@@ -3,6 +3,13 @@
 @tailwind utilities; */
 
 /* Main container for the experience section */
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 .main-exps {
   max-width: 768px;
   margin: 0 auto;
@@ -21,6 +28,8 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
 }
 
 /* Experience section container */

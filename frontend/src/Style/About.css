@@ -1,75 +1,152 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 .about-component {
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    /* font-style: oblique; */
+    align-items: center;
     display: grid;
     grid-template-columns: 2fr 1fr; /* Two equal columns */
     grid-template-areas: 
         'head head'
         'parag myself'
         'parag myself';
-    gap: 20px; /* Space between the columns */
-    padding: 50px; /* Optional padding around the grid */
-    align-items: center;
-    justify-content: center;
-
+    padding: 50px;
+    /* background: linear-gradient(135deg, #f8f9fa, #e3e7ed); */
+    animation: fadeIn 1s ease-in-out;
 }
-.about {
-    /* background-image: url('../image/background.jpg');  Add your background image path */
-    /*background-size: cover;
-    background-position: center; */
-    color: #333; /* Adjust text color for better contrast */
-    padding: 20px; /* Padding inside the about section */
-    border-radius: 8px; /* Rounded corners */
-}
-
 
 .about-head {
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    /* color: rgb(19, 16, 191); */
     color: #17a2b8;
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-
+    font-weight: bold;
+    animation: pulse 2s infinite;
 }
 
 .about-text {
-    max-width: 600px; /* Limit the width for better readability */
+    
+    max-width: 600px;
     margin: 0 auto; /* Center the content */
-    background-color: #e8dddddc; /*Light background for contrast */
+    background-color: rgba(232, 221, 221, 0.9);
     padding: 20px;
-    border-radius: 8px; /* Optional: Rounded corners */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
 }
 
+.about-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 .para {
-    font-size: 1em; /* Normal size for paragraph text */
-    line-height: 1.5; /* Improve readability */
+    font-size: 1em;
+    line-height: 1.6;
 }
 
-
 .about-list span {
-    display: flex; /* Align items in a row */
-    margin: 10px 0; /* Space between list items */
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-list span:hover {
+    transform: translateX(10px);
 }
 
 .about-list img {
-    width: 50px; /* Set a fixed width for the GIFs */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 10px; /* Space between text and GIF */
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
+.about-list img:hover {
+    transform: scale(1.2);
+}
+
+.about-image {
+    
+    justify-content: center;
+}
 
 #myself {
-    margin-top: 30px;
+    margin-top: 20%;
     width: 250px;
     height: 450px;
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Center images vertically */
-    border: 2.5px solid rgb(5, 5, 120);
-    /* border: 2px solid #0c0101; */
+    border: 3px solid rgb(5, 5, 120);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#myself:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-top: 20px;
+    }
+
+    #myself {
+        width: 220px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text {
+        padding: 15px;
+    }
+
+    .about-head {
+        font-size: 2rem;
+    }
+
+    #myself {
+        width: 200px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-component {
+        padding: 30px;
+    }
+
+    .about-head {
+        font-size: 1.8rem;
+    }
+
+    .para {
+        font-size: 0.9em;
+    }
+
+    #myself {
+        width: 180px;
+        height: 300px;
+    }
 }

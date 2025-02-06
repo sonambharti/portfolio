@@ -1,3 +1,9 @@
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 .achieve {
     display: flex;
     flex-direction: column;
@@ -13,6 +19,8 @@
     margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
 }
 
 .achievement-list {
