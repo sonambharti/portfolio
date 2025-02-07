@@ -12,6 +12,7 @@ import Experience from './Experience.js';
 // import Skills from './Skills.js';
 import Project from './Project.js';
 import Achievement from './Achievement';
+import SideLink from './SideLink';
 
 export default function App() {
   // const [loading, setLoading] = useState(true);
@@ -55,8 +56,9 @@ export default function App() {
       {/* <div id="skills"><Skills /></div> */}
       <div id="project"><Project /></div>
       <div id="achievement"><Achievement /></div>
-      <div id="contact"><Contact /></div>
-      <Footer />
+      <div id="contact"><Contact /></div> 
+      <SideLink />
+      {/* <Footer /> */}
     </div>
   );
 }

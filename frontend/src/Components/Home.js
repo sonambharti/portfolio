@@ -62,7 +62,7 @@ export default function Home() {
                     ></span>
                     ))}
                 </div>
-                <a href='Sona.jpg' download>
+                <a id='download' href='Sona.jpg' download>
                     <button className="download-button">Download Resume</button>
                 </a>
             </div>

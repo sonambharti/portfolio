@@ -5,8 +5,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #282c34; /* Footer background color */
-    color: white; /* Footer text color */
+    /* background-color: #282c34; Footer background color */
+    background: transparent;
+    color: azure; /* Footer text color */
     padding: 20px;
     position: relative;
     bottom: 0;
@@ -52,5 +53,5 @@
     width: 100%; /* Make the paragraph take the full width */
     text-align: center; /* Center the text */
     margin: 10px 0 0; /* Add margin to the top */
-    font-size: 1.2em; /* Adjust font size for the footer text */
+    font-size: 1em; /* Adjust font size for the footer text */
 }
