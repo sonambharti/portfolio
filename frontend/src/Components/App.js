@@ -45,6 +45,7 @@ export default function App() {
                 <Route path="/contact" element={<Contact />} />
             </Routes>
         </BrowserRouter> */}
+      
       <Navbar />
       <div id="home"><Home /></div>
       <div id="about"><About /></div>

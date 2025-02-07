@@ -43,7 +43,7 @@ function Experiment({ project, index }) {
                         {project.Extra}
                     </p>
                 </div>
-                <p>
+                <p id="proj-detail">
                     {/* {project.projectDetails} */}
                     <span>{isExpanded ? project.projectDetails : project.projectDetails.split(' ').slice(0, 12).join(' ') + "..."}</span>
                     <button id='exp' onClick={() => setIsExpanded((exp) => !exp)} style={buttonStyle}>{isExpanded ? 'Show Less': 'Show More'}</button>

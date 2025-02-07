@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Style/Home.css';
-import Waving from '../image/waving.gif';
+
 
 export default function Home() {
     const interests = ['Software Development',

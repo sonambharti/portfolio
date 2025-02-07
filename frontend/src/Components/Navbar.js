@@ -11,7 +11,7 @@ export default function Navbar() {
                 <li><Link to="about" smooth={true} duration={500}>About</Link></li>
                 <li><Link to="education" smooth={true} duration={500}>Qualifications</Link></li>
                 <li><Link to="experience" smooth={true} duration={500}>Experience</Link></li>
-                <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
+                {/* <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li> */}
                 <li><Link to="project" smooth={true} duration={1000}>Projects</Link></li>
                 <li><Link to="achievement" smooth={true} duration={500}>Achievements</Link></li>
                 {/* <li><Link to="extras" smooth={true} duration={500}>Extra</Link></li> */}
