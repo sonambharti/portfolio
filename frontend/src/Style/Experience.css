@@ -15,6 +15,7 @@
   margin: 0 auto;
   padding: 3rem 1rem;
   color: #fff;
+
   
   /* background-color: #000; Optional, adjust as needed */
 }
@@ -101,7 +102,7 @@
 .exp-position {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: aliceblue;
 }
 
 /* Duration */
