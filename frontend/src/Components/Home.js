@@ -62,7 +62,8 @@ export default function Home() {
                     ></span>
                     ))}
                 </div>
-                <a id='download' href='Sona.jpg' download>
+                {/* <a id='download' href='Sonam_Main_Resume.pdf' download> */}
+                <a id='download' target='_blank' href='https://drive.google.com/file/d/1im5rPuIvYDdJq2J4NKO7a5Gs8knG3k8a/view?usp=sharing'>
                     <button className="download-button">Download Resume</button>
                 </a>
             </div>
