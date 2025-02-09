@@ -12,7 +12,7 @@ export default function Contact() {
     
         if (!email || !subject || !message) return;
     
-        fetch(`http://localhost:5000/send-email`, {
+        fetch(`https://nodemail-backend.onrender.com/send-email`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
