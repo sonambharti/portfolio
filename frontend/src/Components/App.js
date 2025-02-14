@@ -13,7 +13,7 @@ import Experience from './Experience.js';
 import Project from './Project.js';
 import Achievement from './Achievement';
 import SideLink from './SideLink';
-
+import StarryBackground from '../Animation/StarryBackground';
 export default function App() {
   // const [loading, setLoading] = useState(true);
 
@@ -45,7 +45,7 @@ export default function App() {
                 <Route path="/contact" element={<Contact />} />
             </Routes>
         </BrowserRouter> */}
-      
+      <StarryBackground />     
       <Navbar />
       <div id="home"><Home /></div>
       <div id="about"><About /></div>

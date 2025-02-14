@@ -1,0 +1,64 @@
+/* Background: Deep Night Sky */
+body {
+    background: radial-gradient(ellipse at bottom, #0a0a2a, #01010a);
+    margin: 0;
+  }
+  
+  /* Allow scrolling */
+  html, body {
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  /* Starry Background */
+  .starry-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  
+  /* Stars */
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+    opacity: 0.8;
+    width: 2px;
+    height: 2px;
+    animation: twinkle 4s infinite alternate ease-in-out, moveStars 30s linear infinite;
+  }
+  
+  /* Twinkle Effect - Expanding to Plus Sign */
+  @keyframes twinkle {
+    0% { 
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+    50% { 
+      opacity: 1;
+      transform: scale(1.5);
+      box-shadow: 
+        0px -5px 5px rgba(255, 255, 255, 0.8), 
+        0px 5px 5px rgba(255, 255, 255, 0.8),
+        -5px 0px 5px rgba(255, 255, 255, 0.8),
+        5px 0px 5px rgba(255, 255, 255, 0.8);
+    }
+    100% { 
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+  }
+  
+  /* Soft, Gentle Grid Movement */
+  @keyframes moveStars {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(10px, -10px); }
+    50% { transform: translate(-10px, 10px); }
+    75% { transform: translate(5px, 5px); }
+    100% { transform: translate(0px, 0px); }
+  }
+  
