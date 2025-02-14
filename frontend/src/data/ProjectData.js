@@ -1,5 +1,23 @@
 const projectData = [
     {
+        'name': 'Sonam Portfolio',
+        'year': 'Jan 2025 - Feb 2025',
+        'purpose': 'Personal Development',
+        'Institute': '',
+        'Location': 'Bihar',
+        'Work': [
+            'Designed and built interactive and visually appealing UI with smooth animationed website.',
+            'Responsive design for an optimal user experience across devices.',
+            'Integrated email using Nodemailer for direct communication.'
+        ],
+        'projectDetails': 'This is a personal project built with React.js, Node.js, and CSS, designed to showcase my professional portfolio, in an interactive and visually appealing manner. It features seamless navigation, social media and coding profile links, and a dynamic UI with smooth animations. To facilitate direct communication, I have integrated Nodemailer, allowing visitors to contact me via email. The portfolio is fully responsive, ensuring an optimal user experience across devices while effectively highlighting my expertise and work.',
+        'Tools': ['ReactJS', 'NodeJS', 'CSS', 'REST API'],
+        'GithubRepo': 'https://github.com/sonambharti/portfolio',
+        'DemoLink': 'https://sonam-portfolio-three.vercel.app/',
+        'imgUrl': 'portfolio.png',
+        'Extra': 'Always updated',
+    },
+    {
         'name': 'Privacy Preserving SSI Framework For Biometrics Over Blockchain using Hyperledger Indy',
         'year': 'Aug 2022 - May 2023',
         'purpose': 'MTech Thesis Research',
@@ -10,7 +28,7 @@ const projectData = [
             'Formulated the RXBP method with 85% accuracy to transform Iris templates, integrating it into the architecture.',
         ],
         'projectDetails': 'This SSI framework is designed to secure the identity of the user. This framework is built over a public - permissioned Blockchain using Hyperledger Indy network in Python to store the user data. It\'s  a zero-knowledge proof, decentralized ledger-based identity management architecture. Formulated the Random XOR Bit Pattern (RXBP) method with 85% accuracy to transform the human Iris templates, and integrated this cancellable Biometric into this Privacy Preserving SSI architecture. Built UI platform and incorporated Pseudo-Biometrics to establish unique person identification within the architecture.',
-        'Tools': ['Python', 'Hyperledger Indy', 'OpenCV', 'CASIA-V1 Iris Database', 'React', 'Docker'],
+        'Tools': ['Python', 'Hyperledger Indy', 'OpenCV', 'CASIA-V1 Iris Database', 'ReactJS', 'Docker'],
         'GithubRepo': 'https://github.com/sonambharti/SSI-Management',
         'DemoLink': 'https://github.com/sonambharti',
         'imgUrl': 'blockchain.png',
