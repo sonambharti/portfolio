@@ -1,5 +1,23 @@
 const projectData = [
     {
+        'name': 'Steganography Tool',
+        'year': 'April 2025 - April 2025',
+        'purpose': 'Personal Development',
+        'Institute': '',
+        'Location': 'Bihar',
+        'Work': [
+            'This is a simple web application that uses steganography to hide secret messages in images.',
+            'Responsive design for an optimal user experience across devices.',
+            'Integrated AES encryption technique to secure the secret message within a image.'
+        ],
+        'projectDetails': 'This is a personal project built with React.js, and Tailwind CSS, designed to showcase my frontend development skills, in an interactive and visually appealing manner. This is a simple web application that uses steganography to hide secret messages in images. The application uses the least significant bit (LSB) substitution technique to hide the secret message in the image. The LSB substitution technique replaces the least significant bit of each pixel in the image with the corresponding bit of the secret message. It also includes the feature of the AES (Advanced Encryption Standard) technique to encrypt the secret message.',
+        'Tools': ['ReactJS', 'Typescript', 'Tailwind CSS', 'Crypt JS'],
+        'GithubRepo': 'https://github.com/sonambharti/Steganography',
+        'DemoLink': 'https://steganography-nu.vercel.app/',
+        'imgUrl': '',
+        'Extra': '',
+    },
+    {
         'name': 'Sonam Portfolio',
         'year': 'Jan 2025 - Feb 2025',
         'purpose': 'Personal Development',
@@ -24,8 +42,9 @@ const projectData = [
         'Institute': 'Indian Institute of Technology, Jammu',
         'Location': 'Jammu & Kashmir',
         'Work': [
-            'Designed and built a zero-knowledge proof architecture for decentralized ledger-based identity management.',
+            'Designed and built a zero-knowledge proof architecture for decentralized ledger-based identity management.', 
             'Formulated the RXBP method with 85% accuracy to transform Iris templates, integrating it into the architecture.',
+            'Built UI platform and incorporated Pseudo-Biometrics to establish unique person identification within the architecture.'
         ],
         'projectDetails': 'This SSI framework is designed to secure the identity of the user. This framework is built over a public - permissioned Blockchain using Hyperledger Indy network in Python to store the user data. It\'s  a zero-knowledge proof, decentralized ledger-based identity management architecture. Formulated the Random XOR Bit Pattern (RXBP) method with 85% accuracy to transform the human Iris templates, and integrated this cancellable Biometric into this Privacy Preserving SSI architecture. Built UI platform and incorporated Pseudo-Biometrics to establish unique person identification within the architecture.',
         'Tools': ['Python', 'Hyperledger Indy', 'OpenCV', 'CASIA-V1 Iris Database', 'ReactJS', 'Docker'],
