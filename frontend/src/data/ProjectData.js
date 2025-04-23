@@ -13,11 +13,7 @@ const projectData = [
         'projectDetails': 'This is a personal project built with React.js, and Tailwind CSS, designed to showcase my frontend development skills, in an interactive and visually appealing manner. This is a simple web application that uses steganography to hide secret messages in images. The application uses the least significant bit (LSB) substitution technique to hide the secret message in the image. The LSB substitution technique replaces the least significant bit of each pixel in the image with the corresponding bit of the secret message. It also includes the feature of the AES (Advanced Encryption Standard) technique to encrypt the secret message.',
         'Tools': ['ReactJS', 'Typescript', 'Tailwind CSS', 'Crypt JS'],
         'GithubRepo': 'https://github.com/sonambharti/Steganography',
-<<<<<<< Updated upstream
         'DemoLink': 'https://steganography-nu.vercel.app/',
-=======
-        'DemoLink': 'https://sonam-portfolio-three.vercel.app/',
->>>>>>> Stashed changes
         'imgUrl': '',
         'Extra': '',
     },
