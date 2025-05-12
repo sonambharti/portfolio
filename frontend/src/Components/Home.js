@@ -63,7 +63,7 @@ export default function Home() {
                     ))}
                 </div>
                 {/* <a id='download' href='Sonam_Main_Resume.pdf' download> */}
-                <a id='download' target='_blank' href='https://drive.google.com/file/d/1im5rPuIvYDdJq2J4NKO7a5Gs8knG3k8a/view?usp=sharing'>
+                <a id='download' target='_blank' href='https://drive.google.com/file/d/1UbUzw2dcNHmQsTJfPGuemHr6-feXWnRn/view?usp=sharing'>
                     <button className="download-button">Download Resume</button>
                 </a>
             </div>
