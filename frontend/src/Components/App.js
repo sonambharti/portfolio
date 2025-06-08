@@ -9,7 +9,7 @@ import Footer from './Footer';
 import Contact from './Contact';
 import Education from './Education.js';
 import Experience from './Experience.js';
-// import Skills from './Skills.js';
+import Skills from './Skills.js';
 import Project from './Project.js';
 import Achievement from './Achievement';
 import SideLink from './SideLink';
@@ -54,7 +54,7 @@ export default function App() {
       <div id='education'><Education /></div>
       {/* <Experience /> */}
       <div id="experience"><Experience /></div>
-      {/* <div id="skills"><Skills /></div> */}
+      <div id="skills"><Skills /></div>
       <div id="project"><Project /></div>
       <div id="achievement"><Achievement /></div>
       <div id="contact"><Contact /></div> 
