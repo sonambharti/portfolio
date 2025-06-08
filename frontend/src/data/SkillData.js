@@ -25,7 +25,7 @@ const skillData = [
     },
     {
         'type': 'Subjects',
-        'skill': ['Data Structures', 'Algorithms', 'OOPs', 'DBMS', 'Operating System', 'COmputer Networks']
+        'skill': ['Data Structures', 'Algorithms', 'OOPs', 'DBMS', 'Operating System', 'Computer Networks']
     },
     {
         'type': 'Soft Skills',

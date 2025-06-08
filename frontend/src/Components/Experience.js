@@ -3,8 +3,15 @@ import '../Style/Experience.css';
 import { FaBriefcase, FaLaptopCode } from "react-icons/fa";
 const {expData} = require('../data/ExperienceData.js');
 
+// Map icon name strings to actual icon components
+const iconMap = {
+    FaBriefcase: FaBriefcase,
+    FaLaptopCode: FaLaptopCode
+  };
+
 function WorkExp({exp, index}) {
-    const Icon = exp.icon === "FaBriefcase" ? FaBriefcase : FaLaptopCode;
+    // const Icon = exp.icon === "FaBriefcase" ? FaBriefcase : FaLaptopCode;
+    const Icon = iconMap[exp.icon];
     const ref = useRef(null);
 
     useEffect(() => {

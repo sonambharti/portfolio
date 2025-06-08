@@ -1,0 +1,75 @@
+/* General Styles */
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.skill-head {
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+.skill-icon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+
+}
+.animated-icon {
+    width: 5rem;               /* Equivalent to w-16 */
+    height: 5rem;              /* Equivalent to h-16 */
+    border-radius: 9999px;     /* Fully rounded (circle) */
+    /* background-color: black; */
+    background-color: transparent;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 
+      transform 0.2s ease,
+      filter 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  
+  .icon-img {
+    width: 2.5rem; /* w-10 = 40px = 2.5rem */
+    filter: grayscale(100%);
+    transition: filter 0.2s ease, width 0.2s ease;
+  }
+  
+  .icon-img:hover {
+    filter: grayscale(0%);
+  }
+  
+  @media (min-width: 768px) {
+    .animated-icon {
+      width: 5rem;             /* md:w-20 */
+      height: 5rem;            /* md:h-20 */
+    }
+    .icon-img {
+        width: 3rem; /* md:w-12 = 48px = 3rem */
+      }
+  }
+  
+  .animated-icon:hover {
+    transform: scale(1.1);                        /* Equivalent to hover:scale-110 */
+    filter: brightness(1.25);                     /* Equivalent to hover:brightness-125 */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
+  }
+  
