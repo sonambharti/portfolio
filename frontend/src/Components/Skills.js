@@ -14,7 +14,7 @@ export default function Skills() {
   return (
     <div className="skills">
       <h1 className="skill-head">
-        💻 SKILLS
+        SKILLS
       </h1>
 
       <div className="skill-icon">
