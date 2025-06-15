@@ -48,8 +48,14 @@ export default function About() {
                     </ul>
                 </div>
             </div>
+            {/* <div className='about-image'>
+                <div className="image-base-card">
+                    <img id='myself' src='sdegree-removebg.png' alt='myself'/>
+                </div>
+            </div> */}
             <div className='about-image'>
                 <img id='myself' src='sdegree.jpg' alt='myself'/>
+                {/* <img id='myself' src='sdegree-removebg.png' alt='myself'/> */}
             </div>
         </div>
     )

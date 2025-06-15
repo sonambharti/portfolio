@@ -5,6 +5,7 @@
 }
 
 .contact-me {
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,11 +29,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    width: fit-content;
-    background-color: #fff; /* Card background color */
+    /* height: auto;
+    width: fit-content; */
+    width: 60%; /* Increased width */
+    max-width: 600px; /* Limit for larger screens */
+    min-width: 300px;
+    margin: auto; /* Center the form */
+    /* background-color: #fff; Card background color */
+    background: transparent;
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Shadow for depth */
+    box-shadow: 0 4px 8px rgba(37, 79, 92, 0.908);
     padding: 20px; /* Padding inside the card */
     transition: transform 0.3s, border 0.3s; /* Transition for zoom and border */
     border: 1px solid transparent; /* Initial border */
@@ -42,24 +49,31 @@
 .contact-me-form:hover {
     transform: scale(1.05); /* Zoom out effect on hover */
     border: 1px solid #007BFF; /* Highlighted border color on hover */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
 }
 
 .contact-me-form span {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px; /* Space between fields */
+    width: 100%; /* Add this line */
 }
 
 .contact-me-form label {
     margin-bottom: 5px; /* Space between label and input */
+    color: aliceblue;
 }
 
 .contact-me-form input,
 .contact-me-form textarea {
-    padding: 10px; /* Padding inside input fields */
+    width: 100%; /* Fill the form width */
+    padding: 10px; /* Padding inside input fields*/
     border: 1px solid #ccc; /* Border for input fields */
     border-radius: 4px; /* Rounded corners for input fields */
+    box-shadow: 2px 4px 8px rgba(19, 118, 137, 0.908);
     font-size: 16px; /* Font size for input fields */
+    box-sizing: border-box; /* Prevent padding from increasing width */
+    resize: vertical; /* Allow vertical resizing for textarea */
 }
 
 .contact-me-form button {
@@ -68,10 +82,66 @@
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners for button */
     padding: 10px 15px; /* Padding inside button */
+    box-shadow: 0 4px 8px rgba(37, 79, 92, 0.908);
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Transition for background color */
 }
 
 .contact-me-form button:hover {
     background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Feedback messages */
+
+/* Fading edges using pseudo-elements */
+.feedback-container {
+    width: 50%;
+    position: relative;
+    overflow: hidden; /* Ensures gradient does not overflow */
+}
+
+/* Main message block */
+.feedback {
+    margin: 15px 0;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+}
+
+/* Fade effect on edges using pseudo-elements */
+.feedback::before,
+.feedback::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.feedback::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+}
+
+.feedback::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+}
+
+/* Colors */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
 }
