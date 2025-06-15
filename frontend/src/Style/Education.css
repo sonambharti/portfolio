@@ -27,95 +27,153 @@
     position: relative;
     gap: 10px; /* Reduced horizontal distance between cards */
 }
-
-.degree {
-    width: 300px; /* Set a fixed width for the card */
-    margin: 10px; /* Reduced margin for closer spacing */
+/* Education Section */
+.education {
+    text-align: center;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    background-color: white;
-    /* background-color: rgb(8, 42, 42); */
-    position: relative;
-    z-index: 1;
 }
 
-.degree:hover {
-    transform: scale(1.1) translateY(-10px) translateX(20px); /* Move on x-axis */
+.education .head {
+    color: #17a2b8;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.education {
+    padding: 40px;
+    text-align: center;
+    background: transparent;
+    color: #e0f7fa;
+  }
+  
+  /* Container for cards */
+  .edu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* 3D card style */
+  .degree {
+    position: relative;
+    width: 300px;
+    /* min-height: 200px; */
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid #40e0d0;
+    border-radius: 12px;
+    color: #e0f7fa;
+    font-family: 'Segoe UI', sans-serif;
+    perspective: 800px;
+    transition: transform 0.6s ease, color 0.6s ease;
+    box-shadow: 0 10px 20px rgba(64, 224, 208, 0.2);
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  /* Create top-to-bottom fill with a pseudo-element */
+  .degree::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: #40e0d0;
+    z-index: 0;
+    transition: height 0.6s ease-in-out;
+  }
+  
+  /* Card hover effects */
+  .degree:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+    color: #000;
     box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
     border: 2px solid #00bfff; /* Outlined border */
     z-index: 2;
-}
-
+  }
+  
+  /* Fill from top on hover */
+  .degree:hover::before {
+    height: 100%;
+  }
+  
+  
 .degree:nth-child(odd):hover {
-    transform: rotate(-2deg) scale(1.1) translateY(-10px) translateX(20px); /* Move on x-axis */
-    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
-    border: 2px solid #ff69b4; /* Outlined border */
+  transform: rotate(-2deg) scale(1.1) translateY(-10px) translateX(20px); /* Move on x-axis */
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
+  border: 2px solid #ff69b4; /* Outlined border */
 }
 
 .degree:nth-child(even):hover {
-    transform: rotate(2deg) scale(1.1) translateY(-10px) translateX(-20px); /* Move on x-axis */
-    box-shadow: 0 8px 16px rgba(0, 191, 255, 0.6), 0 0 20px rgba(255, 105, 180, 0.6); /* Bright color shadow */
-    border: 2px solid #00bfff; /* Outlined border */
+  transform: rotate(2deg) scale(1.1) translateY(-10px) translateX(-20px); /* Move on x-axis */
+  box-shadow: 0 8px 16px rgba(0, 191, 255, 0.6), 0 0 20px rgba(255, 105, 180, 0.6); /* Bright color shadow */
+  border: 2px solid #00bfff; /* Outlined border */
 }
 
 .degree:nth-child(odd) {
-    align-self: flex-start;
-    transform: rotate(-2deg);
-    margin-left: 200px;
-    /* margin-right: -50px; Reduce horizontal space for odd cards */
+  align-self: flex-start;
+  transform: rotate(-2deg);
+  margin-left: 200px;
+  /* margin-right: -50px; Reduce horizontal space for odd cards */
 }
 
 .degree:nth-child(even) {
-    align-self: flex-end;
-    transform: rotate(2deg);
-    margin-right: 200px;
-    /* margin-left: -50px; Reduce horizontal space for even cards */
+  align-self: flex-end;
+  transform: rotate(2deg);
+  margin-right: 200px;
+  /* margin-left: -50px; Reduce horizontal space for even cards */
 }
 
 .line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #ccc;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+/* Text stays above the background */
+.degree * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.6s ease;
 }
 
+/* Optional 3D tilt (initially slightly tilted backward) */
+.degree {
+  transform: rotateX(6deg);
+}
+
+/* Headings & paragraphs */
 .deg {
-    font-size: 1.3rem;
-    color: #222;
-    margin-bottom: 5px;
-}
-
-.deg-p {
-    font-size: 1rem;
-    color: #666;
-    font-style: italic;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .deg-marks {
-    font-size: 1.1rem;
-    color: #444;
-    margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-#deg-id {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.deg-p {
+  font-size: 0.95rem;
+  font-style: italic;
 }
 
-#spec {
-    font-style: italic;
-    color: #555;
-}
-
-#marks {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
+/* Responsive */
+@media (max-width: 768px) {
+  .degree {
+    width: 90%;
+    transform: none;
+  }
 }

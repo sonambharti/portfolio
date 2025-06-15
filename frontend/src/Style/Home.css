@@ -17,23 +17,63 @@
 }
 
 
-.download-button {
+/* .download-button {
     /* background-color: #45c7e1; Green background */
-    background: transparent;
-    border: 2px solid aliceblue; 
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding */
+    /*background: transparent;
+    border: 2px solid aliceblue; */
+    /*color: white; /* White text */
+    /*padding: 10px 20px; /* Padding */
     /* border: none; No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size */
-    margin-top: 20px; /* Space above the button */
-}
+    /*border-radius: 5px; /* Rounded corners */
+    /*cursor: pointer; /* Pointer cursor on hover */
+    /*font-size: 16px; /* Font size */
+    /*margin-top: 20px; /* Space above the button */
+/*}
 
 .download-button:hover {
     background-color: #40e0d0;  
+} */
+
+.download-button {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 24px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #40e0d0;
+    border-radius: 5px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s ease;
 }
 
+/* Background fill animation layer */
+.download-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #40e0d0;
+    font-weight: bold;
+    z-index: -1;
+    transition: width 0.6s ease; /* Slow left-to-right fill */
+}
+
+/* Hover effect triggers fill */
+.download-button:hover::before {
+    width: 100%;
+}
+
+/* Optional: make text color flip */
+.download-button:hover {
+    font-weight: bold;
+    color: #000;
+}
+  
 .home-text h1 {
     font-size: 5em; /* Make it bigger */
     background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient color */
