@@ -1,31 +1,12 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.about-component {
+.about-scene {
+    width: 100%;
+    height: 500px;
+    perspective: 1200px;
+    display: block;
+    justify-content: center;
     align-items: center;
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Two equal columns */
-    grid-template-areas: 
-        'head head'
-        'parag myself'
-        'parag myself';
-    padding: 50px;
-    /* background: linear-gradient(135deg, #f8f9fa, #e3e7ed); */
-    animation: fadeIn 1s ease-in-out;
+    margin-top: 50px;
+    margin-bottom: 110px;
     cursor: pointer;
 }
 
@@ -39,21 +20,101 @@
     font-weight: bold;
     animation: pulse 2s infinite;
 }
+  
+
+.about-cube {
+    width: 700px;
+    height: 450px;
+    margin-top: 40px;
+    margin: 0 auto;
+    /* display: inline; */
+    /* align-items: center;
+    justify-content: center; */
+    /* position: relative; */
+    transform-style: preserve-3d;
+    transition: transform 1.4s ease-in-out;
+}
+
+.about-scene:hover .about-cube {
+    transform: rotateY(-180deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- Face 1 ---------- */
+.face1 {
+    background: linear-gradient(135deg, rgba(8, 130, 124, 0.8), rgba(42,82,152,0.8));
+    transform: rotateY(0deg) translateZ(0);
+    color: white;
+    /* opacity: 60%; */
+}
+
+/* .intro-img {
+    opacity: 100%;
+    z-index: 10;
+} */
+
+.face1-content {
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.face1 .intro-text h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background: linear-gradient(to right, #2011f1a7, #d90d51, #00f260, #0575e6); */
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 2s infinite;
+    max-width: 300px;
+}
+
+.face1 .intro-img img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+
+/* ---------- Face 2 ---------- */
+.face2 {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    transform: rotateY(90deg) translateZ(350px);
+}
+
+/* ---------- Face 3 (About Content) ---------- */
+.face3 {
+    background: rgba(232, 221, 221, 0.95);
+    transform: rotateY(180deg);
+    padding: 30px;
+    overflow-y: auto;
+    color: #111;
+}
 
 .about-text {
-    
-    max-width: 600px;
-    margin: 0 auto; /* Center the content */
-    background-color: rgba(232, 221, 221, 0.9);
-    padding: 20px;
-    border-radius: 8px;
+    max-width: 550px;
     transition: transform 0.3s ease-in-out;
 }
-
-.about-text:hover {
+  
+/* .about-text:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .para {
     font-size: 1em;
@@ -71,84 +132,54 @@
     transform: translateX(10px);
 }
 
-
+  
+.about-list p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+  
 .about-list img {
     width: 50px;
     height: auto;
     margin-left: 10px;
     transition: transform 0.3s ease-in-out;
 }
-
+  
 .about-list img:hover {
     transform: scale(1.2);
-} 
-
-.about-image {
-    justify-content: center;
 }
-
-#myself {
-    margin-top: 20%;
-    width: 250px;
-    height: 450px;
-    /* border: 3px solid rgb(5, 5, 120); */
-    border: 3px solid rgba(232, 221, 221, 0.9);
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-#myself:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-} 
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
+  
+  /* ---------- Animations ---------- */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* ---------- Responsive Design ---------- */
+  @media (max-width: 768px) {
+    .about-cube {
+      width: 95%;
+      height: auto;
     }
-
-    .about-image {
-        margin-top: 20px;
+  
+    .face1-content {
+      flex-direction: column;
+      text-align: center;
     }
-
-    #myself {
-        width: 220px;
-        height: 400px;
+  
+    .face1 .intro-img img {
+      width: 160px;
+      margin-top: 20px;
     }
-}
-
-@media (max-width: 768px) {
-    .about-text {
-        padding: 15px;
+  
+    .face1 .intro-text h2 {
+      font-size: 1.5rem;
     }
-
-    .about-head {
-        font-size: 2rem;
+  
+    .face3 {
+      padding: 20px;
     }
-
-    #myself {
-        width: 200px;
-        height: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-component {
-        padding: 30px;
-    }
-
-    .about-head {
-        font-size: 1.8rem;
-    }
-
-    .para {
-        font-size: 0.9em;
-    }
-
-    #myself {
-        width: 180px;
-        height: 300px;
-    }
-}
+  }
+  
