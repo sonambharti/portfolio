@@ -57,6 +57,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    cursor: pointer;
   }
   
   /* 3D card style */
@@ -92,7 +93,7 @@
   
   /* Card hover effects */
   .degree:hover {
-    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+    transform: rotateX(0deg) rotateY(0deg) translatez(90px) scale(1.05);
     color: #000;
     box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
     border: 2px solid #00bfff; /* Outlined border */
@@ -146,6 +147,7 @@
   position: relative;
   z-index: 1;
   transition: color 0.6s ease;
+  transform: translatez(90px);
 }
 
 /* Optional 3D tilt (initially slightly tilted backward) */
