@@ -11,7 +11,7 @@ const expData = [
             'Enhanced website features and libraries, improving user experience and enabling WhatsApp integration for expanded product functionality.',
             'Led the design and deployment of a WebSocket server-client system for real-time audio streaming, onboarding 2 clients, for seamless media communication.',
         ],
-        'Tools': ['Python', 'Next JS', 'Prompt Engineering', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan.'],
+        'Tools': ['Python', 'Next JS', 'Prompt Engineering', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan'],
         "icon": "FaBriefcase",
     },
     {
@@ -32,7 +32,7 @@ const expData = [
             'Containerized applications using Docker and orchestrated deployment via Kubernetes, enabling seamless rollouts with CI/CD pipelines on GitHub Actions to reduce deployment delays by 20%.',
             'Collaborated with cross-functional teams to streamline development workflows and, authored API and systems documentation, and contributed to product architecture, improving team onboarding and codebase understanding.',
         ],
-        'Tools': ['Python', 'FastAPI', 'Flask', 'PyTorch', 'Javascript', 'Node JS', 'RESTful API', 'AWS', 'Docker', 'NoSQL', 'MongoDB', 'Redis', 'Kubernetes', 'Git', 'Prompt Engineering', 'LLM', 'Langchain', 'LlamaIndex', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate.'],
+        'Tools': ['Python', 'FastAPI', 'Flask', 'PyTorch', 'Javascript', 'Node JS', 'RESTful API', 'AWS', 'Docker', 'NoSQL', 'MongoDB', 'Redis', 'Kubernetes', 'Git', 'Prompt Engineering', 'LLM', 'Langchain', 'LlamaIndex', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate'],
         "icon": "FaBriefcase",
     },
     {
