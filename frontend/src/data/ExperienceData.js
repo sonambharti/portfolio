@@ -11,7 +11,7 @@ const expData = [
             'Enhanced website features and libraries, improving user experience and enabling WhatsApp integration for expanded product functionality.',
             'Led the design and deployment of a WebSocket server-client system for real-time audio streaming, onboarding 2 clients, for seamless media communication.',
         ],
-        'Tools': ['Python', 'Next JS', 'Prompt Engineering', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan'],
+        'Tools': ['Python', 'Next JS', 'Prompt Engineering', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan', 'Amplify'],
         "icon": "FaBriefcase",
     },
     {

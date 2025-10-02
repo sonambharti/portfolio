@@ -1,5 +1,41 @@
 const projectData = [
     {
+        'name': 'MyTripMate: AI-powered Trip Planner',
+        'year': 'September 2025 - September 2025',
+        'purpose': 'Google Gen AI Hackathon',
+        'Institute': '',
+        'Location': 'Bihar',
+        'Work': [
+            'Built an AI multi-agent trip planner suggesting destinations based on budget, days, weather, and safety insights.',
+            'Designed automated travel, accommodation planning & booking workflows with one-click execution.',
+            'Submitted the prototype at Google AI Hackathon 2025, demonstrating expertise in AI-driven travel automation.'
+        ],
+        'projectDetails': 'This is an AI-powered multi-agent trip planner system to assist users in creating personalized travel plans that built with Python, Google ADK, Google Vertex, and Google Cloud Platform, designed to showcase my Gen AI and Prompt ENgineering skills, in an interactive and visually appealing manner. The system helps users decide their destination based on budget, number of holiday days, weather conditions, and safety insights derived from real-time news. It then generates a complete source-to-destination itinerary, including comfortable accommodation options, and enables users to complete all bookings seamlessly with a one-click automation feature. This project was successfully submitted as a prototype at the Google AI Hackathon 2025, showcasing innovation in AI-driven travel planning and automation.',
+        'Tools': ['Python', 'Google ADK', 'Vertex AI', 'Google Cloud platform', 'Google Gen AI', "MCP"],
+        'GithubRepo': 'https://github.com/ByteOnAI/Google-Hack2skill-2025.git',
+        'DemoLink': 'https://mytripmate-750979998118.us-central1.run.app/dev-ui/?app=tripmate_agents',
+        'imgUrl': '',
+        'Extra': 'Under development',
+    },
+    {
+        'name': 'Resume Screening & ATS Scoring Platform',
+        'year': 'August 2025 - August 2025',
+        'purpose': 'Personal Development',
+        'Institute': '',
+        'Location': 'Bihar',
+        'Work': [
+            'Developed microservices-based RAG system with Weaviate, achieving resume ingestion & indexing in approx. 60s.',
+            'Engineered retrieval workflows with approx. 320–400 ms context fetching and approx. 2s end-to-end answer generation.',
+            'Built multi-tenant support with isolated indexing per BOT ID to handle multiple clients & use cases at scale.'
+        ],
+        'projectDetails': 'This project is developed a microservices-based Retrieval-Augmented Generation (RAG) system leveraging Weaviate for vector storage and semantic search. The system supports resume ingestion and indexing in approximately 60 seconds, enabling rapid document processing for real-time applications. I engineered high-performance retrieval workflows, achieving 320–400 ms context fetching and delivering end-to-end answer generation in about 2 seconds. To ensure scalability and flexibility, I built multi-tenant support with isolated indexing per BOT ID, allowing the platform to efficiently handle multiple clients and diverse use cases at scale.',
+        'Tools': ['Python', 'FastAPI', 'LLM', 'Langchain', 'Weaviate', 'OpenAI', 'Groq'],
+        'GithubRepo': 'https://github.com/sonambharti/LLM_RAG_AGENT/',
+        'DemoLink': '',
+        'imgUrl': '',
+        'Extra': '',
+    },
+    {
         'name': 'Steganography Tool',
         'year': 'April 2025 - April 2025',
         'purpose': 'Personal Development',
