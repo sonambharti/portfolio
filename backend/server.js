@@ -28,15 +28,6 @@ const recipientEmail = process.env.NODEMAILER_TOEMAIL;
 // console.log(senderPassword);
 // console.log(recipientEmail);
 
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-// Handle requests by serving index.html for all routes
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-});
-
-
 app.post('/send-email', async (req, res) => {
     try {
         console.log("Received request body:", req.body);
