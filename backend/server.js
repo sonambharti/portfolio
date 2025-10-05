@@ -28,7 +28,6 @@ const recipientEmail = process.env.NODEMAILER_TOEMAIL;
 // console.log(senderPassword);
 // console.log(recipientEmail);
 
-
 app.post('/send-email', async (req, res) => {
     try {
         console.log("Received request body:", req.body);
@@ -42,7 +41,7 @@ app.post('/send-email', async (req, res) => {
             // host: 'smtp.gmail.com',
             // port: 465,
             // secure: true,
-            service: 'Gmail',
+            service: 'gmail',
             auth: {
                 user: senderEmail,
                 pass: senderPassword
