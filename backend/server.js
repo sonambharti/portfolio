@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
