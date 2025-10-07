@@ -1,9 +1,8 @@
 // server.js
-const express = require('express');
-const path = require('path');
-const cors = require('cors');
-require('dotenv').config();
-// const nodemailer = require('nodemailer');
+import express from "express";
+import path from "path";
+import cors from "cors";
+import dotenv from "dotenv";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -45,26 +44,7 @@ app.post('/send-email', async (req, res) => {
             subject: subject,
             text: `Sender's Email: ${email}\n\nMessage:\n${message}`
           });
-        // const transporter = nodemailer.createTransport({
-        //     host: 'smtp.gmail.com',
-        //     port: 465,
-        //     secure: true,
-        //     service: 'gmail',
-        //     auth: {
-        //         user: senderEmail,
-        //         pass: senderPassword
-        //     }
-        // });
 
-        // const mailOptions = {
-        //     from: senderEmail,
-        //     to: recipientEmail,
-        //     replyTo: email,
-        //     subject: subject,
-        //     text: `Sender's Email: ${email}\n\nMessage:\n${message}`
-        // };
-
-        // const info = await transporter.sendMail(mailOptions);
         console.log('Email sent:', info.response);
         res.status(200).json({ message: 'Email successfully sent' });
 
