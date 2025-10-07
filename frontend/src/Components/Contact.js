@@ -20,6 +20,7 @@ export default function Contact() {
         setFeedback({ type: "", message: "" });
 
         fetch(`https://portfolio-ehid.onrender.com/send-email`, {
+        // fetch(`http://localhost:5000/send-email`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
