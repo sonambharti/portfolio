@@ -40,7 +40,7 @@ app.post('/send-email', async (req, res) => {
         }
         
         const transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
+            host: '1.2.3.4',
             port: 465,
             secure: true,
             // service: 'gmail',
@@ -50,11 +50,12 @@ app.post('/send-email', async (req, res) => {
                 pass: senderPassword
             },
             tls: {
+                servername: 'gmail.com',
                 rejectUnauthorized: true,
                 minVersion: 'TLSv1.2'
             },
             // Robust timeouts to fail fast instead of hanging:
-            connectionTimeout: 2000000, // 10s
+            connectionTimeout: 200000, // 10s
             greetingTimeout: 10000,
             socketTimeout: 20000,
             // Force IPv4 in case IPv6 causes hangs on your host:
