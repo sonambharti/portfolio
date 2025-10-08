@@ -54,7 +54,7 @@ app.post('/send-email', async (req, res) => {
                 minVersion: 'TLSv1.2'
             },
             // Robust timeouts to fail fast instead of hanging:
-            connectionTimeout: 10000, // 10s
+            connectionTimeout: 2000000, // 10s
             greetingTimeout: 10000,
             socketTimeout: 20000,
             // Force IPv4 in case IPv6 causes hangs on your host:
