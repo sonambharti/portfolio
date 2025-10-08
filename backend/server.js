@@ -1,11 +1,12 @@
 // server.js
-import express from "express";
-import path from "path";
-import cors from "cors";
-import dotenv from "dotenv";
-import { Resend } from "resend";
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
+require('dotenv').config();
+const nodemailer = require('nodemailer');
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+
+
 const app = express();
 app.use(express.json()); // Middleware to parse JSON requests
 
@@ -37,14 +38,32 @@ app.post('/send-email', async (req, res) => {
         if (!email || !subject || !message) {
             return res.status(400).json({ error: 'All fields are required' });
         }
-        const info = resend.emails.send({
+        
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 587,
+            secure: true,
+            service: 'gmail',
+            port: 587,
+            auth: {
+                user: senderEmail,
+                pass: senderPassword
+            },
+            tls: {
+                rejectUnauthorized: true,
+                minVersion: 'TLSv1.2'
+            },
+        });
+
+        const mailOptions = {
             from: senderEmail,
             to: recipientEmail,
             replyTo: email,
             subject: subject,
             text: `Sender's Email: ${email}\n\nMessage:\n${message}`
-          });
+        };
 
+        const info = await transporter.sendMail(mailOptions);
         console.log('Email sent:', info.response);
         res.status(200).json({ message: 'Email successfully sent' });
 
