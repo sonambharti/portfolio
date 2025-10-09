@@ -25,7 +25,7 @@ const port = 5000;
 // Load environment variables
 const senderEmail = process.env.NODEMAILER_EMAIL;
 const senderPassword = process.env.NODEMAILER_PASS;
-const recipientEmail = process.env.NODEMAILER_TOEMAIL;
+const recipientEmail = process.env.NODEMAILER_TO_EMAIL;
 // console.log(senderEmail);
 // console.log(senderPassword);
 // console.log(recipientEmail);
@@ -40,7 +40,7 @@ app.post('/send-email', async (req, res) => {
         }
         
         const transporter = nodemailer.createTransport({
-            host: '1.2.3.4',
+            host: 'smtp.gmail.com',
             port: 465,
             secure: true,
             // service: 'gmail',
@@ -50,12 +50,11 @@ app.post('/send-email', async (req, res) => {
                 pass: senderPassword
             },
             tls: {
-                servername: 'gmail.com',
                 rejectUnauthorized: true,
                 minVersion: 'TLSv1.2'
             },
             // Robust timeouts to fail fast instead of hanging:
-            connectionTimeout: 200000, // 10s
+            connectionTimeout: 10000, // 10s
             greetingTimeout: 10000,
             socketTimeout: 20000,
             // Force IPv4 in case IPv6 causes hangs on your host:
