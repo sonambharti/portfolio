@@ -12,7 +12,7 @@ export default function Home() {
                         'Prompt Engineering',
                         'Blockchain',
                         'Blog Writing',
-                    ]);
+                    ], []);
 
     const fullName = 'SONAM BHARTI';                    
     // const [typedText, setTypedText] = useState('');
