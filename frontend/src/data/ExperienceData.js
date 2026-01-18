@@ -10,6 +10,10 @@ const expData = [
             'Spearheaded the implementation of RAG pipelines in generative AI Voice Bots with AWS Knowledge Bases, Titan embeddings model, and OpenSearch Service vectorDB achieving retrieval latency <40 ms.',
             'Enhanced website features and libraries, improving user experience and enabling WhatsApp integration for expanded product functionality.',
             'Led the design and deployment of a WebSocket server-client system for real-time audio streaming, onboarding 2 clients, for seamless media communication.',
+            'Collaborated on omnichannel integrations, including WhatsApp Business API, to scale user outreach and boost business exposure through automated, multi-channel communication.',
+            'Engineered a voice-enabled AI assistant utilizing WebSockets and LLM integration with tooling/function calling to automate UI navigation and task execution via voice commands.',
+            'Enabled real-time browser-based calling via websocket protocols, streamlining user communication and enhancing the assistant’s interactive capabilities.',
+            'Built a hybrid AI chat system that supports simultaneous text and voice communication, utilizing real-time audio processing to enhance accessibility and user engagement.'
         ],
         'Tools': ['Python', 'Next JS', 'Prompt Engineering', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan', 'Amplify'],
         "icon": "FaBriefcase",
