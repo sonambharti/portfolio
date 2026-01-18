@@ -3,7 +3,7 @@ const expData = [
         'Orgainisation': 'Vibrium.ai',
         'Position': 'Full Stack Software Developer',
         'Duration': 'Aug 2025 - Present',
-        'Location': 'Remote',
+        'Location': 'Hyderabad',
         'Description': '',
         'Experience': [
             'Configured and deployed LLM-based Voice Bots for 2 clients by setting up persona leveraging prompt engineering technique for upto 5 usecases enabling tailored conversational experiences.',
@@ -15,7 +15,7 @@ const expData = [
             'Enabled real-time browser-based calling via websocket protocols, streamlining user communication and enhancing the assistant’s interactive capabilities.',
             'Built a hybrid AI chat system that supports simultaneous text and voice communication, utilizing real-time audio processing to enhance accessibility and user engagement.'
         ],
-        'Tools': ['Python', 'Next JS', 'Prompt Engineering', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan', 'Amplify'],
+        'Tools': ['Python', 'Next JS', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan', 'Amplify', 'Cloud Watch'],
         "icon": "FaBriefcase",
     },
     {

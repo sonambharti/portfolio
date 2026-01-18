@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 // import Preloader from './Preloader.js';
 import '../Style/App.css';
 // import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Contact from './Contact';
 import Education from './Education.js';
 import Experience from './Experience.js';
