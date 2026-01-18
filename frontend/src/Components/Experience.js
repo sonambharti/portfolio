@@ -15,6 +15,8 @@ function WorkExp({exp, index}) {
     const ref = useRef(null);
 
     useEffect(() => {
+        // 1. Copy ref.current to a variable inside the effect
+        const currentRef = ref.current; 
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -26,13 +28,13 @@ function WorkExp({exp, index}) {
             { threshold: 0.1 }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
