@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Tooltip } from 'react-tooltip';
 import '../Style/Skills.css';

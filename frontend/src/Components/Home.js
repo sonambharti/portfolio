@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import '../Style/Home.css';
 
 
 export default function Home() {
-    const interests = ['Software Development',
+    // Wrap the array in useMemo
+    const interests =  useMemo(() =>['Software Development',
                         'Web Development',
                         'Machine Learning',
                         'Deep Learning',
@@ -11,7 +12,7 @@ export default function Home() {
                         'Prompt Engineering',
                         'Blockchain',
                         'Blog Writing',
-                    ];
+                    ], []);
 
     const fullName = 'SONAM BHARTI';                    
     // const [typedText, setTypedText] = useState('');
@@ -63,7 +64,7 @@ export default function Home() {
                     ))}
                 </div>
                 {/* <a id='download' href='Sonam_Main_Resume.pdf' download> */}
-                <a id='download' target='_blank' href='https://drive.google.com/file/d/18TSQoboFk1opdfXGti7-Sk0RIZlf1NO2/view?usp=sharing'>
+                <a id='download' target='_blank' href='https://drive.google.com/file/d/18TSQoboFk1opdfXGti7-Sk0RIZlf1NO2/view?usp=sharing' rel="noreferrer">
                     <button className="download-button">Download Resume</button>
                 </a>
             </div>
