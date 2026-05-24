@@ -6,14 +6,14 @@ const expData = [
         'Location': 'Hyderabad',
         'Description': '',
         'Experience': [
-            'Configured and deployed LLM-based Voice Bots for 2 clients by setting up persona leveraging prompt engineering technique for upto 5 usecases enabling tailored conversational experiences.',
-            'Spearheaded the implementation of RAG pipelines in generative AI Voice Bots with AWS Knowledge Bases, Titan embeddings model, and OpenSearch Service vectorDB achieving retrieval latency <40 ms.',
-            'Enhanced website features and libraries, improving user experience and enabling WhatsApp integration for expanded product functionality.',
-            'Led the design and deployment of a WebSocket server-client system for real-time audio streaming, onboarding 2 clients, for seamless media communication.',
-            'Collaborated on omnichannel integrations, including WhatsApp Business API, to scale user outreach and boost business exposure through automated, multi-channel communication.',
-            'Engineered a voice-enabled AI assistant utilizing WebSockets and LLM integration with tooling/function calling to automate UI navigation and task execution via voice commands.',
-            'Enabled real-time browser-based calling via websocket protocols, streamlining user communication and enhancing the assistant’s interactive capabilities.',
-            'Built a hybrid AI chat system that supports simultaneous text and voice communication, utilizing real-time audio processing to enhance accessibility and user engagement.'
+            'Configured and deployed LLM-based Voice Bots for 4 enterprise clients using prompt engineering, persona design, and engineering contracts across 5+ conversational AI use cases.',
+            'Architected scalable RAG pipelines using AWS Knowledge Bases, Titan Embeddings, and OpenSearch Vector DB with retrieval latency below 40ms for enterprise AI assistants.',
+            'Enhanced website features, reusable libraries, and WhatsApp Business API integrations to enable automated scalable omnichannel communication and significantly improved business outreach and operational efficiency.',
+            'Led the end-to-end design and deployment of a WebSocket-based for real-time audio streaming, successfully onboarding 2 clients, for seamless media communication.',
+            'Engineered real-time AI speech pipelines integrating LLM, ASR, and TTS over WebSockets achieving sub-1s latency, with full-duplex streaming enabling barge-in interruptions for natural conversational experiences.',
+            'Built a hybrid AI Voice + Text assistant sdk using webRTC, LLM orchestration, and tooling/function calling enabling UI automation, task execution, and accessibility-driven interactions through natural voice and text commands.',
+            'Collaborated directly with enterprise clients to gather requirements, define technical solutions, and deliver scalable AI systems aligned with business objectives.',
+            'Remediated VAPT findings and enforced secure SDLC governance through secure coding standards, audit-compliant review processes, and coordination of enterprise compliance audits with clients and vendors..'
         ],
         'Tools': ['Python', 'Next JS', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan', 'Amplify', 'Cloud Watch'],
         "icon": "FaBriefcase",
