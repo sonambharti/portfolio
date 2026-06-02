@@ -1,185 +1,216 @@
 .about-scene {
-    width: 100%;
-    height: 500px;
-    perspective: 1200px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 110px;
-    cursor: pointer;
+  width: 100%;
+  height: 500px;
+  perspective: 1500px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 110px;
+  cursor: pointer;
 }
 
 .about-head {
-    text-align: center;
-    color: #17a2b8;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    animation: pulse 2s infinite;
+  text-align: center;
+  color: #17a2b8;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
 }
-  
 
 .about-cube {
-    width: 700px;
-    height: 450px;
-    margin-top: 40px;
-    margin: 0 auto;
-    /* display: inline; */
-    /* align-items: center;
-    justify-content: center; */
-    /* position: relative; */
-    transform-style: preserve-3d;
-    transition: transform 1.4s ease-in-out;
+  --half-width: 350px;
+  width: 700px;
+  height: 450px;
+  margin-top: 40px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-1 * var(--half-width)));
+  /* Shift pivot back to geometric center */
+  transition: transform 1.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Tactile spring transition */
+  will-change: transform;
 }
 
 .about-scene:hover .about-cube {
-    transform: rotateY(-180deg);
+  transform: translateZ(calc(-1 * var(--half-width))) rotateY(-180deg);
+  /* Rotate around center pivot */
 }
 
 .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* ---------- Face 1 ---------- */
+/* ---------- Face 1 (Front) ---------- */
 .face1 {
-    background: linear-gradient(135deg, rgba(8, 130, 124, 0.8), rgba(42,82,152,0.8));
-    transform: rotateY(0deg) translateZ(0);
-    color: white;
-    /* opacity: 60%; */
+  background: linear-gradient(135deg, rgba(8, 130, 124, 0.8), rgba(42, 82, 152, 0.8));
+  transform: rotateY(0deg) translateZ(var(--half-width));
+  /* Sits on front plane of cube */
+  color: white;
 }
-
-/* .intro-img {
-    opacity: 100%;
-    z-index: 10;
-} */
 
 .face1-content {
-    display: flex;
-    width: 100%;
-    padding: 30px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .face1 .intro-text h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* background: linear-gradient(to right, #2011f1a7, #d90d51, #00f260, #0575e6); */
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: pulse 2s infinite;
-    max-width: 300px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite;
+  max-width: 300px;
 }
 
 .face1 .intro-img img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    border: 3px solid #fff;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #fff;
 }
 
-/* ---------- Face 2 ---------- */
+/* ---------- Face 2 (Side/Right) ---------- */
 .face2 {
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-    transform: rotateY(90deg) translateZ(350px);
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  transform: rotateY(90deg) translateZ(var(--half-width));
+  /* Forms right side of cube */
 }
 
-/* ---------- Face 3 (About Content) ---------- */
+/* ---------- Face 3 (Back) ---------- */
 .face3 {
-    background: rgba(232, 221, 221, 0.95);
-    transform: rotateY(180deg);
-    padding: 30px;
-    overflow-y: auto;
-    color: #111;
+  background: rgba(232, 221, 221, 0.95);
+  transform: rotateY(180deg) translateZ(var(--half-width));
+  /* Forms back side of cube */
+  padding: 30px;
+  overflow-y: auto;
+  color: #111;
 }
 
 .about-text {
-    max-width: 550px;
-    transition: transform 0.3s ease-in-out;
+  max-width: 550px;
+  transition: transform 0.3s ease-in-out;
 }
-  
-/* .about-text:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-} */
 
 .para {
-    font-size: 1em;
-    line-height: 1.6;
+  font-size: 1em;
+  line-height: 1.6;
 }
 
 .about-list span {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  transition: transform 0.3s ease-in-out;
 }
 
 .about-list span:hover {
-    transform: translateX(10px);
+  transform: translateX(10px);
 }
 
-  
 .about-list p {
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
 }
-  
+
 .about-list img {
-    width: 50px;
-    height: auto;
-    margin-left: 10px;
-    transition: transform 0.3s ease-in-out;
+  width: 50px;
+  height: 40px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
 }
-  
+
 .about-list img:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
-  
-  /* ---------- Animations ---------- */
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+
+/* ---------- Animations ---------- */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  
-  /* ---------- Responsive Design ---------- */
-  @media (max-width: 768px) {
-    .about-cube {
-      width: 95%;
-      height: auto;
-    }
-  
-    .face1-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .face1 .intro-img img {
-      width: 160px;
-      margin-top: 20px;
-    }
-  
-    .face1 .intro-text h2 {
-      font-size: 1.5rem;
-    }
-  
-    .face3 {
-      padding: 20px;
-    }
+
+  50% {
+    transform: scale(1.05);
   }
-  
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .about-scene {
+    height: auto;
+    min-height: 520px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .about-cube {
+    width: 320px;
+    --half-width: 160px;
+    height: 480px;
+  }
+
+  .face1-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .face1 .intro-img img {
+    width: 150px;
+    margin-top: 15px;
+  }
+
+  .face1 .intro-text h2 {
+    font-size: 1.4rem;
+    max-width: 100%;
+  }
+
+  .face3 {
+    padding: 20px;
+  }
+
+  .para {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .about-list p {
+    font-size: 0.8rem;
+  }
+
+  .about-list img {
+    width: 35px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-cube {
+    width: 280px;
+    --half-width: 140px;
+    height: 500px;
+  }
+}

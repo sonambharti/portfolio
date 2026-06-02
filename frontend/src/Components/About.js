@@ -31,12 +31,12 @@ export default function About() {
                         <p className='para'>
                             I'm a passionate software🌈 and web🌐 developer🎯 from India 🚀
                             with a deep enthusiasm for Generative AI🤖, Blockchain🔗 and DevOps.
-                            I hold an M.Tech in Computer Science from IIT Jammu and a B.Tech from 
-                            Nalanda College of Engineering, both completed with academic distinction. 
+                            I hold an M.Tech in Computer Science from IIT Jammu and a B.Tech from
+                            Nalanda College of Engineering, both completed with academic distinction.
                             <br />
                             Beyond coding, I am a 📊 strong advocate for 📜 open source and innovation🤖,
                             always eager to solve challenging problems🤔. Achievements in hackathons,
-                            national competitions, and a solid foundation in programming 
+                            national competitions, and a solid foundation in programming
                             reflect my commitment to excellence in the tech space.
                         </p>
                         <ul className='about-list'>

@@ -15,7 +15,7 @@ const projectData = [
         'GithubRepo': 'https://github.com/ByteOnAI/Google-Hack2skill-2025.git',
         'DemoLink': 'https://mytripmate-750979998118.us-central1.run.app/dev-ui/?app=tripmate_agents',
         'imgUrl': '',
-        'Extra': 'Under development',
+        'Extra': '',
     },
     {
         'name': 'Resume Screening & ATS Scoring Platform',
@@ -78,7 +78,7 @@ const projectData = [
         'Institute': 'Indian Institute of Technology, Jammu',
         'Location': 'Jammu & Kashmir',
         'Work': [
-            'Designed and built a zero-knowledge proof architecture for decentralized ledger-based identity management.', 
+            'Designed and built a zero-knowledge proof architecture for decentralized ledger-based identity management.',
             'Formulated the RXBP method with 85% accuracy to transform Iris templates, integrating it into the architecture.',
             'Built UI platform and incorporated Pseudo-Biometrics to establish unique person identification within the architecture.'
         ],
@@ -201,7 +201,7 @@ const projectData = [
         'Institute': 'Nalanda College of Engineering, Chandi, Bihar',
         'Location': 'Jammu & Kashmir',
         'Work': [
-            'Constructed an interactive, clone of the Notepad Text Editor using Java', 
+            'Constructed an interactive, clone of the Notepad Text Editor using Java',
             'Validated and maintained the application to uphold user requirements and expected performance.',
         ],
         'projectDetails': 'In this project, an interactive clone of the Notepad Text Editor was developed using Java, implementing core functionalities such as text editing, file management, and basic formatting. The application was designed to ensure a seamless user experience with an intuitive interface for tasks like text input, saving, and opening files. Throughout development, rigorous validation processes were employed to ensure that the application met all specified user requirements, including responsiveness, stability, and compatibility across different environments.',
@@ -229,7 +229,7 @@ const projectData = [
         'Extra': '',
     },
 
-    
+
 ];
 
-module.exports = {projectData};
+module.exports = { projectData };
