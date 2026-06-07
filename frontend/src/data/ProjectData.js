@@ -1,5 +1,23 @@
 const projectData = [
     {
+        'name': 'Resume Screening & ATS Scoring Platform',
+        'year': 'June 2026 - June 2026',
+        'purpose': 'Personal Development',
+        'Institute': '',
+        'Location': 'Bihar',
+        'Work': [
+            'Architected a modular multi - LLM Resume Screener achieving <3s parsing-to-scoring latency per candidate profile.',
+            'Engineered a file-based FAISS RAG pipeline indexing 50+ resumes/batch with sub-50ms semantic search response time.',
+            'Built a conversational ReAct Agent that automates candidate audits and matches skills against 3k+ character JDs.'
+        ],
+        'projectDetails': 'This project is architected and engineered a modular multi-LLM Resume Screening & ATS Scoring Platform that delivers end-to-end candidate evaluation in under 3 seconds from PDF parsing to final ATS score. The system leverages a file-based FAISS RAG pipeline that indexes 50+ resumes per batch, enabling sub-50ms semantic search across the resume vector database for rapid skill matching and relevance ranking. Built on a conversational ReAct Agent architecture, the platform automates comprehensive candidate audits by parsing uploaded PDF resumes using pdfplumber, splitting them into optimized text chunks (17 chunks for a typical resume), generating OpenAI embeddings with text-embedding-3-small, and storing them in a FAISS index persisted to ./data/vector_db. The agent matches candidate skills against lengthy job descriptions (3,000+ characters) using GPT-4o, providing detailed scoring and audit results through a Gradio-based UI that supports real-time chat interactions for deeper candidate analysis. This serverless, modular design separates concerns across dedicated components—including PDF parsing, embedding service, vector store, scoring engine, and agent facade—ensuring maintainability while achieving production-grade latency targets for high-volume resume screening workflows.',
+        'Tools': ['Python', 'Gradio', 'LLM', 'Langchain', 'FAISS', 'OpenAI', 'Groq', 'Gemini', 'HuggingFace', 'ReAct'],
+        'GithubRepo': 'https://github.com/sonambharti/ResumeScreening-ATSScoring',
+        'DemoLink': '',
+        'imgUrl': '',
+        'Extra': '',
+    },
+    {
         'name': 'MyTripMate: AI-powered Trip Planner',
         'year': 'September 2025 - September 2025',
         'purpose': 'Google Gen AI Hackathon',
@@ -17,24 +35,24 @@ const projectData = [
         'imgUrl': '',
         'Extra': '',
     },
-    {
-        'name': 'Resume Screening & ATS Scoring Platform',
-        'year': 'August 2025 - August 2025',
-        'purpose': 'Personal Development',
-        'Institute': '',
-        'Location': 'Bihar',
-        'Work': [
-            'Developed microservices-based RAG system with Weaviate, achieving resume ingestion & indexing in approx. 60s.',
-            'Engineered retrieval workflows with approx. 320–400 ms context fetching and approx. 2s end-to-end answer generation.',
-            'Built multi-tenant support with isolated indexing per BOT ID to handle multiple clients & use cases at scale.'
-        ],
-        'projectDetails': 'This project is developed a microservices-based Retrieval-Augmented Generation (RAG) system leveraging Weaviate for vector storage and semantic search. The system supports resume ingestion and indexing in approximately 60 seconds, enabling rapid document processing for real-time applications. I engineered high-performance retrieval workflows, achieving 320–400 ms context fetching and delivering end-to-end answer generation in about 2 seconds. To ensure scalability and flexibility, I built multi-tenant support with isolated indexing per BOT ID, allowing the platform to efficiently handle multiple clients and diverse use cases at scale.',
-        'Tools': ['Python', 'FastAPI', 'LLM', 'Langchain', 'Weaviate', 'OpenAI', 'Groq'],
-        'GithubRepo': 'https://github.com/sonambharti/LLM_RAG_AGENT/',
-        'DemoLink': '',
-        'imgUrl': '',
-        'Extra': '',
-    },
+    // {
+    //     'name': 'Resume Screening & ATS Scoring Platform',
+    //     'year': 'August 2025 - August 2025',
+    //     'purpose': 'Personal Development',
+    //     'Institute': '',
+    //     'Location': 'Bihar',
+    //     'Work': [
+    //         'Developed microservices-based RAG system with Weaviate, achieving resume ingestion & indexing in approx. 60s.',
+    //         'Engineered retrieval workflows with approx. 320–400 ms context fetching and approx. 2s end-to-end answer generation.',
+    //         'Built multi-tenant support with isolated indexing per BOT ID to handle multiple clients & use cases at scale.'
+    //     ],
+    //     'projectDetails': 'This project is developed a microservices-based Retrieval-Augmented Generation (RAG) system leveraging Weaviate for vector storage and semantic search. The system supports resume ingestion and indexing in approximately 60 seconds, enabling rapid document processing for real-time applications. I engineered high-performance retrieval workflows, achieving 320–400 ms context fetching and delivering end-to-end answer generation in about 2 seconds. To ensure scalability and flexibility, I built multi-tenant support with isolated indexing per BOT ID, allowing the platform to efficiently handle multiple clients and diverse use cases at scale.',
+    //     'Tools': ['Python', 'FastAPI', 'LLM', 'Langchain', 'Weaviate', 'OpenAI', 'Groq'],
+    //     'GithubRepo': 'https://github.com/sonambharti/LLM_RAG_AGENT/',
+    //     'DemoLink': '',
+    //     'imgUrl': '',
+    //     'Extra': '',
+    // },
     {
         'name': 'Steganography Tool',
         'year': 'April 2025 - April 2025',
