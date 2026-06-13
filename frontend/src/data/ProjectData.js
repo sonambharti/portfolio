@@ -13,7 +13,7 @@ const projectData = [
         'projectDetails': 'This project is architected and engineered a modular multi-LLM Resume Screening & ATS Scoring Platform that delivers end-to-end candidate evaluation in under 3 seconds from PDF parsing to final ATS score. The system leverages a file-based FAISS RAG pipeline that indexes 50+ resumes per batch, enabling sub-50ms semantic search across the resume vector database for rapid skill matching and relevance ranking. Built on a conversational ReAct Agent architecture, the platform automates comprehensive candidate audits by parsing uploaded PDF resumes using pdfplumber, splitting them into optimized text chunks (17 chunks for a typical resume), generating OpenAI embeddings with text-embedding-3-small, and storing them in a FAISS index persisted to ./data/vector_db. The agent matches candidate skills against lengthy job descriptions (3,000+ characters) using GPT-4o, providing detailed scoring and audit results through a Gradio-based UI that supports real-time chat interactions for deeper candidate analysis. This serverless, modular design separates concerns across dedicated components—including PDF parsing, embedding service, vector store, scoring engine, and agent facade—ensuring maintainability while achieving production-grade latency targets for high-volume resume screening workflows.',
         'Tools': ['Python', 'Gradio', 'LLM', 'Langchain', 'FAISS', 'OpenAI', 'Groq', 'Gemini', 'HuggingFace', 'ReAct'],
         'GithubRepo': 'https://github.com/sonambharti/ResumeScreening-ATSScoring',
-        'DemoLink': '',
+        'DemoLink': 'https://huggingface.co/spaces/sbharti1402/resume-ats-screener',
         'imgUrl': '',
         'Extra': '',
     },
