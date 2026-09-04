@@ -1,0 +1,405 @@
+.arch-showcase {
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
+    padding-bottom: clamp(3rem, 6vw, 4.5rem);
+    border-bottom: 1px solid var(--border);
+}
+
+.arch-showcase-header {
+    margin-bottom: 1.5rem;
+}
+
+.arch-showcase-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 0.5rem;
+}
+
+.arch-showcase-sub {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 60ch;
+    margin: 0;
+}
+
+.arch-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0 1.25rem;
+}
+
+.arch-tab {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    transition: border-color 200ms ease, color 200ms ease;
+}
+
+.arch-tab:hover {
+    color: var(--text);
+}
+
+.arch-tab.is-active {
+    color: var(--bg);
+    background: var(--hue-blue);
+    border-color: var(--hue-blue);
+}
+
+.arch-panel {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem clamp(1rem, 3vw, 2rem) 2rem;
+}
+
+.arch-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.arch-panel-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.arch-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--hue-teal);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--hue-teal) 25%, transparent);
+    animation: arch-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes arch-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .arch-status-dot {
+        animation: none;
+    }
+}
+
+.arch-panel-note {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-faint);
+}
+
+.arch-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.25rem;
+}
+
+.arch-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.arch-metric-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+}
+
+.arch-metric-value {
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+    color: var(--hue-blue);
+}
+
+/* Diagram */
+.arch-diagram {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-top: 120px;
+    margin-top: -120px;
+    padding-bottom: 0.5rem;
+}
+
+.arch-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    width: 140px;
+}
+
+.arch-gutter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 52px;
+}
+
+.arch-gutter-stack {
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.arch-connector {
+    position: relative;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arch-connector-line {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    top: 50%;
+    height: 1px;
+    background: var(--border-strong);
+    transform: translateY(-50%);
+}
+
+.arch-connector-arrow {
+    position: relative;
+    z-index: 1;
+    color: var(--text-faint);
+    font-size: 0.9rem;
+    background: var(--bg-elevated);
+    padding: 0 2px;
+}
+
+.arch-connector.is-active .arch-connector-line {
+    background: var(--hue-blue);
+}
+
+.arch-connector.is-active .arch-connector-arrow {
+    color: var(--hue-blue);
+}
+
+.arch-connector-dot {
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--hue-blue);
+    box-shadow: 0 0 8px 2px color-mix(in srgb, var(--hue-blue) 60%, transparent);
+    transform: translate(-50%, -50%);
+}
+
+.arch-connector-label {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.35rem;
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    color: var(--hue-blue);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.15rem 0.5rem;
+}
+
+/* Nodes */
+.arch-node {
+    position: relative;
+    min-height: 84px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    text-align: center;
+    padding: 0.85rem 0.6rem;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    cursor: default;
+    transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.arch-node:focus-visible {
+    outline: 2px solid var(--hue-blue);
+    outline-offset: 2px;
+}
+
+.arch-node-icon {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+}
+
+.arch-node-label {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.arch-node-sublabel {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    color: var(--text-faint);
+}
+
+.arch-node-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.arch-node-tag {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    line-height: 1.3;
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.1rem 0.4rem;
+}
+
+.arch-node.is-active {
+    border-color: var(--hue-blue);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--hue-blue) 16%, transparent);
+    transform: translateY(-2px);
+}
+
+.arch-node.is-active .arch-node-icon {
+    color: var(--hue-blue);
+}
+
+.arch-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    padding: 0.75rem 0.85rem;
+    text-align: left;
+    z-index: 20;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.arch-tooltip-desc {
+    margin: 0 0 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+
+.arch-tooltip-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-faint);
+}
+
+.arch-tooltip-status {
+    color: var(--hue-teal);
+}
+
+.arch-request-log {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.arch-request-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--hue-blue);
+    flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+    .arch-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 1.25rem;
+    }
+
+    .arch-diagram {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .arch-col,
+    .arch-gutter {
+        width: 100%;
+    }
+
+    .arch-gutter {
+        height: 44px;
+    }
+
+    .arch-connector {
+        height: 44px;
+    }
+
+    .arch-connector-arrow {
+        transform: rotate(90deg);
+    }
+
+    .arch-connector-line {
+        left: 50%;
+        right: auto;
+        top: 4px;
+        bottom: 4px;
+        width: 1px;
+        height: auto;
+        transform: translateX(-50%);
+    }
+
+    .arch-connector-dot {
+        left: 50% !important;
+    }
+
+    .arch-tooltip {
+        left: 0;
+        transform: none;
+        width: 100%;
+        max-width: 260px;
+    }
+}

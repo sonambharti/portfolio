@@ -1,181 +1,101 @@
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
 .education {
-    text-align: center;
-    padding: 20px;
-}
-
-.education .head {
-    color: #17a2b8;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
-    font-weight: bold;
-    animation: pulse 2s infinite;
+    padding: clamp(4rem, 8vw, 7rem) 0;
 }
 
 .edu {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    gap: 10px; /* Reduced horizontal distance between cards */
-}
-/* Education Section */
-.education {
-    text-align: center;
-    padding: 20px;
+    gap: 2.5rem;
+    padding-left: 2.75rem;
 }
 
-.education .head {
-    color: #17a2b8;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
-    font-weight: bold;
-    animation: pulse 2s infinite;
-}
-
-.education {
-    padding: 40px;
-    text-align: center;
-    background: transparent;
-    color: #e0f7fa;
-  }
-  
-  /* Container for cards */
-  .edu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    cursor: pointer;
-  }
-  
-  /* 3D card style */
-  .degree {
-    position: relative;
-    width: 300px;
-    /* min-height: 200px; */
-    padding: 20px;
-    background-color: transparent;
-    border: 1px solid #40e0d0;
-    border-radius: 12px;
-    color: #e0f7fa;
-    font-family: 'Segoe UI', sans-serif;
-    perspective: 800px;
-    transition: transform 0.6s ease, color 0.6s ease;
-    box-shadow: 0 10px 20px rgba(64, 224, 208, 0.2);
-    overflow: hidden;
-    transform-style: preserve-3d;
-  }
-  
-  /* Create top-to-bottom fill with a pseudo-element */
-  .degree::before {
-    content: '';
+.edu-line {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 0%;
-    width: 100%;
-    background-color: #40e0d0;
-    z-index: 0;
-    transition: height 0.6s ease-in-out;
-  }
-  
-  /* Card hover effects */
-  .degree:hover {
-    transform: rotateX(0deg) rotateY(0deg) translatez(90px) scale(1.05);
-    color: #000;
-    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
-    border: 2px solid #00bfff; /* Outlined border */
-    z-index: 2;
-  }
-  
-  /* Fill from top on hover */
-  .degree:hover::before {
-    height: 100%;
-  }
-  
-  
-.degree:nth-child(odd):hover {
-  transform: rotate(-2deg) scale(1.1) translateY(-10px) translateX(20px); /* Move on x-axis */
-  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), 0 0 20px rgba(0, 191, 255, 0.6); /* Bright color shadow */
-  border: 2px solid #ff69b4; /* Outlined border */
+    left: 0.65rem;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 2px;
+    background: var(--border-strong);
+    transform-origin: top;
 }
 
-.degree:nth-child(even):hover {
-  transform: rotate(2deg) scale(1.1) translateY(-10px) translateX(-20px); /* Move on x-axis */
-  box-shadow: 0 8px 16px rgba(0, 191, 255, 0.6), 0 0 20px rgba(255, 105, 180, 0.6); /* Bright color shadow */
-  border: 2px solid #00bfff; /* Outlined border */
-}
-
-.degree:nth-child(odd) {
-  align-self: flex-start;
-  transform: rotate(-2deg);
-  margin-left: 200px;
-  /* margin-right: -50px; Reduce horizontal space for odd cards */
-}
-
-.degree:nth-child(even) {
-  align-self: flex-end;
-  transform: rotate(2deg);
-  margin-right: 200px;
-  /* margin-left: -50px; Reduce horizontal space for even cards */
-}
-
-.line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #ccc;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-/* Text stays above the background */
-.degree * {
-  position: relative;
-  z-index: 1;
-  transition: color 0.6s ease;
-  transform: translatez(90px);
-}
-
-/* Optional 3D tilt (initially slightly tilted backward) */
 .degree {
-  transform: rotateX(6deg);
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
 }
 
-/* Headings & paragraphs */
-.deg {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 8px;
+.degree-node {
+    position: absolute;
+    left: -2.35rem;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--degree-hue, var(--border-strong));
+    box-shadow: 0 0 0 4px var(--bg);
 }
 
-.deg-marks {
-  font-size: 1.1rem;
-  font-weight: 500;
+.degree-year {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--degree-hue, var(--text));
+    width: 3.2rem;
+    flex-shrink: 0;
 }
 
-.deg-p {
-  font-size: 0.95rem;
-  font-style: italic;
+.degree-main {
+    flex: 1;
+    min-width: 220px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .degree {
-    width: 90%;
-    transform: none;
-  }
+.degree-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--text);
+    margin: 0 0 0.3rem;
+}
+
+.degree-spec {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin: 0 0 0.3rem;
+}
+
+.degree-college {
+    font-size: 0.85rem;
+    color: var(--text-faint);
+    margin: 0;
+}
+
+.degree-marks {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-faint);
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .edu {
+        padding-left: 2rem;
+    }
+
+    .degree-node {
+        left: -1.6rem;
+    }
+
+    .degree {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .degree-year {
+        order: -1;
+        width: auto;
+    }
 }

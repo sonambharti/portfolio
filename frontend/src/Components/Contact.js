@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../Style/Contact.css';
-// const edot = require('dotenv').config({path: 'frontend/.env'});
 
 export default function Contact() {
     const [email, setEmail] = useState('');
@@ -29,29 +28,27 @@ export default function Contact() {
         })
         .then(response => {
             if (!response.ok) {
-                setFeedback({ type: "error", message: "📧 Email couldn't sent!" });
+                setFeedback({ type: "error", message: "Message couldn't be sent. Please try again." });
                 throw new Error('Failed to send email');
             }
             return response.text();
         })
-        .then(data => {
-            // console.log('Success:', data);
-            setFeedback({ type: "success", message: "📧 Email sent successfully!" });
-            alert('Email sent successfully!'); // Show success alert
+        .then(() => {
+            setFeedback({ type: "success", message: "Message sent. I'll get back to you soon." });
             setEmail("");
             setSubject("");
             setMessage("");
         })
         .catch((error) => {
             console.error('Error:', error);
-            setFeedback({ type: "error", message: "📧 Email couldn't sent!" });
-            alert('Failed to send email. Please try again.'); // Show error alert
-        });
+            setFeedback({ type: "error", message: "Message couldn't be sent. Please try again." });
+        })
+        .finally(() => setLoading(false));
     }
 
     return (
-        <div className='contact-me'>
-            <h1 className='contact-head'>Get in Touch</h1>
+        <div className="contact-me container">
+            <h1 className="section-heading">Get in Touch</h1>
             <div className='feedback-container'>
                 {feedback.message && (
                     <div
@@ -62,11 +59,11 @@ export default function Contact() {
                 )}
             </div>
             <form className="contact-me-form" onSubmit={handleSubmit}>
-                
+
                 <span>
                     <label htmlFor='email-id'>Email</label>
-                    <input className='email' id='email-id' type='text' 
-                    placeholder='Enter your Email id' 
+                    <input className='email' id='email-id' type='text'
+                    placeholder='you@example.com'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     />
@@ -74,8 +71,8 @@ export default function Contact() {
 
                 <span>
                     <label htmlFor='subject-id'>Subject</label>
-                    <input className='subject' id='subject-id' type='text'  
-                    placeholder='Enter your subject' 
+                    <input className='subject' id='subject-id' type='text'
+                    placeholder='What is this about?'
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     />
@@ -84,12 +81,12 @@ export default function Contact() {
                 <span>
                     <label htmlFor='message-id'>Message</label>
                     <textarea className='message' id='message-id'
-                    placeholder='Enter your message' 
+                    placeholder='Tell me a bit about the project or opportunity.'
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     />
                 </span>
-                <button type="submit" disabled={loading}>Submit</button>
+                <button type="submit" disabled={loading}>{loading ? 'Sending…' : 'Send Message'}</button>
             </form>
         </div>
     );

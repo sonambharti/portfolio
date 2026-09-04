@@ -7,13 +7,14 @@ const StarryBackground = () => {
   useEffect(() => {
     const generateStars = () => {
       const starArray = [];
-      for (let i = 0; i < 150; i++) {
+      for (let i = 0; i < 70; i++) {
         starArray.push({
           id: i,
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
           size: Math.random() * 2 + 1,
           delay: Math.random() * 5,
+          duration: Math.random() * 2.5 + 2.5,
         });
       }
       setStars(starArray);
@@ -37,6 +38,7 @@ const StarryBackground = () => {
             width: `${star.size}px`,
             height: `${star.size}px`,
             animationDelay: `${star.delay}s`,
+            animationDuration: `${star.duration}s`,
           }}
         />
       ))}

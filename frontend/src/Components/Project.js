@@ -1,52 +1,37 @@
 import { useState } from "react";
-import { FaGithub } from 'react-icons/fa'; // Importing GitHub icon
-import { FiExternalLink } from "react-icons/fi"; // Importing External Link icon
+import { motion, useReducedMotion } from "framer-motion";
+import { GithubLogo, ArrowUpRight } from "@phosphor-icons/react";
+import ArchitectureShowcase from './ArchitectureShowcase';
 import '../Style/Project.css';
 const { projectData } = require('../data/ProjectData.js');
 
-function Experiment({ project, index }) {
-    const [isExpanded, setIsExpanded] = useState(true);
-    // const [isLeft, setLeft] = useState(true);
-    // Determine image position based on index
-    // const isLeft = index % 2 === 0; // Even index for left, odd for right
-    // const isRight = isLeft ? false : true;
-    const buttonStyle = {
-        background: 'none',
-        border: 'none',
-        // font: 'inherit',
-        cursor: 'pointer',
-        marginLeft: '6px',
-        color: isExpanded ? 'rgb(46, 179, 200)' : 'rgba(243, 19, 19, 0.941)'
-    };
+const hues = ['hue-blue', 'hue-violet', 'hue-teal', 'hue-amber', 'hue-rose'];
+
+function Experiment({ project, hue }) {
+    const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className='experiment'>
-            {/* {isLeft && <img src={`projImage/${project.imgUrl}`} alt={project.name} className="projImage" />} */}
+        <div className="experiment" style={{ '--proj-hue': `var(--${hue})` }}>
             <div className="exper-text">
                 <h2 id="proj-name">{project.name}</h2>
                 <div className="project-links">
-                    <p className="github">
                     {project.GithubRepo && (
                         <a href={project.GithubRepo} target="_blank" rel="noopener noreferrer">
-                            GitHub <FaGithub /> 
+                            <GithubLogo size={15} /> GitHub
                         </a>
                     )}
-                    </p>
-                    <p className="demo">
                     {project.DemoLink && (
                         <a href={project.DemoLink} target="_blank" rel="noopener noreferrer">
-                            Demo <FiExternalLink />
+                            <ArrowUpRight size={15} /> Demo
                         </a>
                     )}
-                    </p>
-                    <p>
-                        {project.Extra}
-                    </p>
+                    {project.Extra && <span className="proj-extra">{project.Extra}</span>}
                 </div>
                 <p id="proj-detail">
-                    {/* {project.projectDetails} */}
-                    <span>{isExpanded ? project.projectDetails : project.projectDetails.split(' ').slice(0, 12).join(' ') + "..."}</span>
-                    <button id='exp' onClick={() => setIsExpanded((exp) => !exp)} style={buttonStyle}>{isExpanded ? 'Show Less': 'Show More'}</button>
+                    <span>{isExpanded ? project.projectDetails : project.projectDetails.split(' ').slice(0, 12).join(' ') + '…'}</span>
+                    <button id="exp" onClick={() => setIsExpanded((exp) => !exp)}>
+                        {isExpanded ? 'Show less' : 'Show more'}
+                    </button>
                 </p>
                 <div className="tools">
                     {project.Tools.map((tool, index) => (
@@ -54,20 +39,44 @@ function Experiment({ project, index }) {
                     ))}
                 </div>
             </div>
-            {/* {isRight && <img src={`projImage/${project.imgUrl}`} alt={project.name} className="projImage" />} */}
         </div>
     );
 }
 
 export default function Project() {
-    
+    const reduceMotion = useReducedMotion();
+
+    const container = {
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.08 } },
+    };
+
+    const item = {
+        hidden: reduceMotion ? {} : { opacity: 0, y: 18 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
+    };
+
     return (
         <div className="project">
-            <h1 className="proj-head">Projects I've Built</h1>
-            <div className="pro">
-                {projectData.map((project, indx) => (
-                    <Experiment project={project} index={indx} key={indx} />
-                ))}
+            <div className="container">
+                <span className="section-kicker">Selected work</span>
+                <h1 className="section-heading">Projects I&apos;ve Built</h1>
+
+                <ArchitectureShowcase />
+
+                <motion.div
+                    className="pro"
+                    variants={container}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.08 }}
+                >
+                    {projectData.map((project, indx) => (
+                        <motion.div variants={item} key={indx}>
+                            <Experiment project={project} hue={hues[indx % hues.length]} />
+                        </motion.div>
+                    ))}
+                </motion.div>
             </div>
         </div>
     );
