@@ -15,6 +15,7 @@ const skillData = [
     skills: [
       { name: "DynamoDB", icon: "dynamodb" },
       { name: "MySQL", icon: "mysql" },
+      { name: "PostgreSQL", icon: "postgresql" },
       { name: "MongoDB", icon: "mongodb" },
       { name: "Redis", icon: "redis" },
       { name: "AWS S3", icon: "aws" }
@@ -102,4 +103,4 @@ const skillData = [
   }
 ];
 
-module.exports = { skillData };
+module.exports = { skillData };

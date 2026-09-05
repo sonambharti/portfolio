@@ -1,52 +1,66 @@
+import { motion, useReducedMotion } from 'framer-motion';
 import '../Style/About.css';
-import coding from '../image/coding.gif';
-import eating from '../image/eating-rbg.gif';
-import sleepNCode from '../image/sleep-n-code-rbg.gif';
+
+const stats = [
+    { value: 'M.Tech', label: 'Computer Science, IIT Jammu', hue: 'hue-blue' },
+    { value: '2+ yrs', label: 'Full-stack & GenAI engineering', hue: 'hue-teal' },
+    { value: 'Hyderabad', label: 'Currently building at Vibrium.ai', hue: 'hue-rose' },
+];
 
 export default function About() {
+    const reduceMotion = useReducedMotion();
+
+    const container = {
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.1 } },
+    };
+
+    const item = {
+        hidden: reduceMotion ? {} : { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+    };
+
     return (
-        <div className="about-scene">
-            <h1 className='about-head'>About Me (She/her)</h1>
-            <div className="about-cube">
-                {/* Face 1 */}
-                <div className="face face1">
-                    <div className="face1-content">
-                        <div className="intro-text">
-                            <h2>Hover or Tap to Know More...</h2>
-                        </div>
-                        <div className="intro-img">
-                            <img src="sdegree.jpg" alt="myself" />
-                        </div>
-                    </div>
-                </div>
+        <div className="about">
+            <div className="container">
+                <h1 className="section-heading">About Me <span className="about-pronoun">(She/her)</span></h1>
 
-                {/* Face 2 - empty vibrant background */}
-                <div className="face face2">
-                    {/* decorative empty face */}
-                </div>
-
-                {/* Face 3 - About content */}
-                <div className="face face3">
-                    <div className="about-text">
-                        <p className='para'>
-                            I'm a passionate software🌈 and web🌐 developer🎯 from India 🚀
-                            with a deep enthusiasm for Generative AI🤖, Blockchain🔗 and DevOps.
-                            I hold an M.Tech in Computer Science from IIT Jammu and a B.Tech from
-                            Nalanda College of Engineering, both completed with academic distinction.
-                            <br />
-                            Beyond coding, I am a 📊 strong advocate for 📜 open source and innovation🤖,
-                            always eager to solve challenging problems🤔. Achievements in hackathons,
-                            national competitions, and a solid foundation in programming
-                            reflect my commitment to excellence in the tech space.
+                <motion.div
+                    className="about-grid"
+                    variants={container}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                >
+                    <motion.div className="about-copy" variants={item}>
+                        <p>
+                            I&apos;m a software and web developer from India with a deep interest in
+                            Generative AI, blockchain, and DevOps. I hold an M.Tech in Computer Science
+                            from IIT Jammu and a B.Tech from Nalanda College of Engineering, both
+                            completed with academic distinction.
                         </p>
-                        <ul className='about-list'>
-                            <li><span><p>Contributing on Python, React and AI projects</p><img src={coding} alt='Coding GIF' /></span></li>
-                            <li><span><p>Exploring new technologies</p><img src={eating} alt='Eating GIF' /></span></li>
-                            <li><span><p>Balancing work and relaxation</p><img src={sleepNCode} alt='Sleep and Code GIF' /></span></li>
-                            <li><span><p>Looking for opportunities</p><img src={coding} alt='Code GIF' /></span></li>
-                        </ul>
-                    </div>
-                </div>
+                        <p>
+                            Beyond day-to-day engineering, I care about open source and solving hard,
+                            unglamorous problems. Wins in hackathons and national competitions, paired
+                            with a solid grounding in programming fundamentals, shape how I approach new
+                            work.
+                        </p>
+                    </motion.div>
+
+                    <motion.div className="about-stats" variants={container}>
+                        {stats.map((stat) => (
+                            <motion.div
+                                className="about-stat"
+                                key={stat.label}
+                                variants={item}
+                                style={{ '--stat-hue': `var(--${stat.hue})` }}
+                            >
+                                <span className="about-stat-value">{stat.value}</span>
+                                <span className="about-stat-label">{stat.label}</span>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
             </div>
         </div>
     );

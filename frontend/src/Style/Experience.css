@@ -1,38 +1,8 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-/* Main container for the experience section */
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
 .main-exps {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
-  color: #fff;
-  cursor: pointer;
-  /* background-color: #000; Optional, adjust as needed */
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  color: var(--text);
 }
 
-/* Header styling */
-.main-exps h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #17a2b8;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  animation: pulse 2s infinite;
-}
-
-/* Experience section container */
 .experience {
   position: relative;
   margin-top: 2rem;
@@ -42,9 +12,10 @@
 .relative {
   position: relative;
   margin-bottom: 4rem;
+  padding-left: 3rem;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(24px);
+  transition: opacity 500ms cubic-bezier(0.23, 1, 0.32, 1), transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .relative.in-view {
@@ -52,80 +23,96 @@
   transform: translateY(0);
 }
 
+.relative.in-view.is-subdued {
+  opacity: 0.45;
+}
+
+.relative.is-active {
+  opacity: 1;
+}
+
 /* Icon container */
 .icon {
   position: absolute;
-  top: 0.5rem;
-  left: -2rem;
-  width: 3rem;
-  height: 3rem;
+  top: 0.15rem;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #3b82f6, #9333ea);
+  background: var(--gradient-signature);
   color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.15rem;
   z-index: 10;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 18px rgba(91, 141, 239, 0.35);
+  transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 220ms ease;
 }
 
-.icon:hover {
-  transform: scale(1.1) rotate(10deg);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+@media (hover: hover) and (pointer: fine) {
+  .relative:hover .icon {
+    transform: scale(1.1) rotate(8deg);
+    box-shadow: 0 6px 22px rgba(144, 103, 240, 0.45);
+  }
 }
-/* Vertical line */
+
+.relative.is-active .icon {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--hue-blue) 20%, transparent), 0 4px 18px rgba(91, 141, 239, 0.35);
+}
+
+/* Vertical line: starts where the icon ends, fades out toward the end of the entry */
 .lines {
   position: absolute;
-  left: -0.44rem;
-  top: 2rem;
-  width: 0.125rem;
-  height: 20%;
-  background: linear-gradient(to bottom, #3b82f6, transparent);
-  transition: height 1s ease;
-}
-
-.relative:hover .lines {
-  height: 100%;
+  left: calc(1.25rem - 1px);
+  top: 2.85rem;
+  width: 2px;
+  height: calc(100% - 2.85rem);
+  background: linear-gradient(to bottom, var(--hue-blue), var(--hue-violet) 40%, transparent);
+  transform-origin: top;
+  pointer-events: none;
 }
 
 /* Experience details container */
 .exp-details {
-  margin-left: 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 /* Position title */
 .exp-position {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: aliceblue;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
 }
 
 /* Duration */
 .duration {
-  font-size: 0.875rem;
-  color: #6b7280;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
 }
 
 /* Organisation details */
 .organisation {
-  margin-top: -1.3rem;
-  font-size: 1rem;
-  font-style: italic;
-  margin-left: 2rem;
-  color: #9ca3af;
+  margin: 0.25rem 0 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
 
 /* Experience points list */
 .exp-points {
-  font-size: 0.875rem;
-  color: #9ca3af;
-  margin-left: 2rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
   list-style-type: disc;
-  list-style-position: inside;
+  list-style-position: outside;
+  margin-left: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -134,161 +121,49 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
-  margin-left: 2rem;
+  margin-top: 1.25rem;
 }
 
 /* Individual tool tag */
 .tool {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  background-color: #1f2937;
-  color: #4b525c;
-  border-radius: 9999px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: border-color 200ms ease, color 200ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1), background 200ms ease;
 }
 
-.tool:hover {
-  background-color: #3b82f6;
-  color: #fff;
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Fade-In Animation for Experience Details */
-/* .exp-details, .organisation, .exp-points, .tools {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.relative:hover .exp-details,
-.relative:hover .organisation,
-.relative:hover .exp-points,
-.relative:hover .tools {
-    opacity: 1;
-    transform: translateY(0);
-} */
-
-
-
-
-@keyframes gradientShift {
-  0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
+@media (hover: hover) and (pointer: fine) {
+  .tool:hover {
+    border-color: var(--hue-blue);
+    color: #fff;
+    background: var(--gradient-signature);
+    transform: translateY(-2px);
   }
 }
 
-/* Add this to your Experience.css */
-@media (max-width: 768px) {
-  /* Adjust the layout for smaller screens */
-
-  .main-exps {
-      padding: 1rem; /* Reduce padding for smaller screens */
-  }
-
-  .main-exps h1 {
-      font-size: 2rem; /* Reduce the font size for smaller screens */
-  }
-
-  .experience {
-      margin-top: 1rem; /* Adjust spacing for smaller screens */
-  }
-
+@media (max-width: 640px) {
   .relative {
-      margin-bottom: 2rem; /* Reduce spacing between experience blocks */
+    padding-left: 2.75rem;
   }
 
   .icon {
-      left: 0; /* Adjust icon positioning for smaller screens */
-      width: 2.5rem; /* Reduce size for smaller screens */
-      height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
   }
 
   .lines {
-      left: 0; /* Adjust line positioning for smaller screens */
+    left: calc(1rem - 1px);
+    top: 2.35rem;
+    height: calc(100% - 2.35rem);
   }
 
   .exp-details {
-      flex-direction: column; /* Stack details vertically on smaller screens */
-      align-items: flex-start; /* Align to the left */
-  }
-
-  .exp-position {
-      font-size: 1.2rem; /* Reduce font size for smaller screens */
-  }
-
-  .duration {
-      font-size: 0.8rem; /* Reduce font size for smaller screens */
-  }
-
-  .organisation {
-      font-size: 0.9rem; /* Reduce font size for smaller screens */
-  }
-
-  .exp-points {
-      font-size: 0.8rem; /* Reduce font size for smaller screens */
-      margin-left: 1rem; /* Adjust spacing for smaller screens */
-  }
-
-  .tools {
-      gap: 0.3rem; /* Reduce spacing between tools for smaller screens */
-      margin-left: 1rem; /* Adjust spacing for smaller screens */
-  }
-
-  .tool {
-      padding: 0.3rem 0.8rem; /* Reduce padding for smaller screens */
-      font-size: 0.8rem; /* Reduce font size for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further adjustments for very small screens */
-
-  .main-exps {
-      padding: 0.5rem; /* Reduce padding for very small screens */
-  }
-
-  .main-exps h1 {
-      font-size: 2rem; /* Reduce font size for very small screens */
-  }
-
-  .icon {
-      width: 2rem; /* Reduce size for very small screens */
-      height: 2rem;
-  }
-
-  .exp-position {
-      font-size: 1rem; /* Further reduce font size for very small screens */
-  }
-
-  .duration {
-      font-size: 0.7rem; /* Further reduce font size for very small screens */
-  }
-
-  .organisation {
-      font-size: 0.8rem; /* Further reduce font size for very small screens */
-  }
-
-  .exp-points {
-      font-size: 0.7rem; /* Further reduce font size for very small screens */
-      margin-left: 0.5rem; /* Adjust spacing for very small screens */
-  }
-
-  .tools {
-      gap: 0.2rem; /* Further reduce spacing for very small screens */
-      margin-left: 0.5rem; /* Adjust spacing for very small screens */
-  }
-
-  .tool {
-      padding: 0.2rem 0.5rem; /* Further reduce padding for very small screens */
-      font-size: 0.7rem; /* Further reduce font size for very small screens */
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

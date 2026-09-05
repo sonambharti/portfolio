@@ -15,13 +15,13 @@ const expData = [
             'Collaborated directly with enterprise clients to gather requirements, define technical solutions, and deliver scalable AI systems aligned with business objectives.',
             'Remediated VAPT findings and enforced secure SDLC governance through secure coding standards, audit-compliant review processes, and coordination of enterprise compliance audits with clients and vendors..'
         ],
-        'Tools': ['Python', 'Next JS', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan', 'Amplify', 'Cloud Watch'],
+        'Tools': ['Python', 'Next JS', 'Typescript', 'Git', 'Jira', 'Prompt Engineering', 'LLM', 'Langchain', 'OpenAI', 'Faiss', 'ChromaDB', 'Weaviate', 'Pinecone', 'AWS EC2', 'AWS S3', 'Bedrock', 'Knowledge Bases', 'OpenSearh Service', 'Titan', 'Amplify', 'Cloud Watch', 'Lambda', 'DynamoDB', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'WebRTC', 'WebSockets', 'ASR', 'TTS'],
         "icon": "FaBriefcase",
     },
     {
         'Orgainisation': 'Saarthi.ai',
         'Position': 'Full Stack Developer - I',
-        'Duration': 'Aug 2023 - Apr 2025',
+        'Duration': 'Aug 2023 - Jul 2025',
         'Location': 'Bengaluru, Karnataka',
         'Description': '',
         'Experience': [
