@@ -1,5 +1,5 @@
 .contact-me {
-    padding: clamp(4rem, 8vw, 7rem) 0 6rem;
+    padding: clamp(1.5rem, 3vw, 2.5rem) 0 6rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
