@@ -3,7 +3,7 @@
     min-height: 100dvh;
     display: flex;
     align-items: center;
-    padding: calc(64px + 2rem) 0 3rem;
+    padding: calc(64px + 0.75rem) 0 3rem;
     overflow: hidden;
 }
 

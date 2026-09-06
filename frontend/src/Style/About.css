@@ -1,5 +1,12 @@
 .about {
-    padding: clamp(4rem, 8vw, 7rem) 0;
+    min-height: calc(100dvh - 64px);
+    display: flex;
+    align-items: center;
+    padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(4rem, 8vw, 7rem);
+}
+
+.about > .container {
+    width: 100%;
 }
 
 .about-pronoun {
