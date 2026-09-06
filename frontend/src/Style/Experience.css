@@ -1,4 +1,8 @@
 .main-exps {
+  min-height: calc(100dvh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(4rem, 8vw, 7rem);
   color: var(--text);
 }

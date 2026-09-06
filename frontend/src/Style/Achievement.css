@@ -1,5 +1,12 @@
 .achieve {
+    min-height: calc(100dvh - 64px);
+    display: flex;
+    align-items: center;
     padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(4rem, 8vw, 7rem);
+}
+
+.achieve > .container {
+    width: 100%;
 }
 
 .achievement-list {
