@@ -1,5 +1,6 @@
 .contact-me {
-    padding: clamp(1.5rem, 3vw, 2.5rem) 0 6rem;
+    padding-top: clamp(1.5rem, 3vw, 2.5rem);
+    padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -25,7 +26,7 @@
     font-size: 0.78rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: var(--text-faint);
+    color: var(--text-muted);
 }
 
 .contact-me-form input,
@@ -105,4 +106,25 @@
 .error {
     color: var(--text);
     border-color: var(--hue-rose);
+}
+
+@media (max-width: 640px) {
+    .contact-me {
+        padding-top: clamp(1rem, 4vw, 1.75rem);
+    }
+
+    .contact-me-form span {
+        margin-bottom: 1.25rem;
+    }
+
+    .contact-me-form input,
+    .contact-me-form textarea {
+        font-size: 16px;
+    }
+
+    .contact-me-form button {
+        align-self: stretch;
+        text-align: center;
+        padding: 0.9rem 1.5rem;
+    }
 }

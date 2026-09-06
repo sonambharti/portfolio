@@ -47,6 +47,14 @@
   --gutter: clamp(1.25rem, 4vw, 3rem);
 }
 
+@media (max-width: 640px) {
+  :root {
+    /* wider than the floating icon rail's edge inset so section content
+       never runs underneath it */
+    --gutter: clamp(2.25rem, 8vw, 2.75rem);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
