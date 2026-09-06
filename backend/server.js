@@ -5,6 +5,8 @@ const cors = require('cors');
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
+
+
 const app = express();
 app.use(express.json()); // Middleware to parse JSON requests
 
@@ -23,11 +25,10 @@ const port = 5000;
 // Load environment variables
 const senderEmail = process.env.NODEMAILER_EMAIL;
 const senderPassword = process.env.NODEMAILER_PASS;
-const recipientEmail = process.env.NODEMAILER_TOEMAIL;
+const recipientEmail = process.env.NODEMAILER_TO_EMAIL;
 // console.log(senderEmail);
 // console.log(senderPassword);
 // console.log(recipientEmail);
-
 
 app.post('/send-email', async (req, res) => {
     try {
@@ -37,16 +38,27 @@ app.post('/send-email', async (req, res) => {
         if (!email || !subject || !message) {
             return res.status(400).json({ error: 'All fields are required' });
         }
-
+        
         const transporter = nodemailer.createTransport({
-            // host: 'smtp.gmail.com',
-            // port: 465,
-            // secure: true,
-            service: 'Gmail',
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            // service: 'gmail',
+            
             auth: {
                 user: senderEmail,
                 pass: senderPassword
-            }
+            },
+            tls: {
+                rejectUnauthorized: true,
+                minVersion: 'TLSv1.2'
+            },
+            // Robust timeouts to fail fast instead of hanging:
+            connectionTimeout: 10000, // 10s
+            greetingTimeout: 10000,
+            socketTimeout: 20000,
+            // Force IPv4 in case IPv6 causes hangs on your host:
+            family: 4,
         });
 
         const mailOptions = {

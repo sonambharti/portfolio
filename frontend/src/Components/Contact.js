@@ -18,7 +18,8 @@ export default function Contact() {
         setLoading(true);
         setFeedback({ type: "", message: "" });
 
-        fetch(`https://portfolio-ehid.onrender.com/send-email`, {
+        // fetch(`https://portfolio-ehid.onrender.com/send-email`, {
+        fetch(`https://nodemail-backend.onrender.com/send-email`, {
         // fetch(`http://localhost:5000/send-email`, {
             method: 'POST',
             headers: {
