@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
 
 
@@ -23,12 +23,8 @@ app.use((req, res, next) => {
 const port = 5000;
 
 // Load environment variables
-const senderEmail = process.env.NODEMAILER_EMAIL;
-const senderPassword = process.env.NODEMAILER_PASS;
 const recipientEmail = process.env.NODEMAILER_TO_EMAIL;
-// console.log(senderEmail);
-// console.log(senderPassword);
-// console.log(recipientEmail);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post('/send-email', async (req, res) => {
     try {
@@ -38,39 +34,20 @@ app.post('/send-email', async (req, res) => {
         if (!email || !subject || !message) {
             return res.status(400).json({ error: 'All fields are required' });
         }
-        
-        const transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 465,
-            secure: true,
-            // service: 'gmail',
-            
-            auth: {
-                user: senderEmail,
-                pass: senderPassword
-            },
-            tls: {
-                rejectUnauthorized: true,
-                minVersion: 'TLSv1.2'
-            },
-            // Robust timeouts to fail fast instead of hanging:
-            connectionTimeout: 10000, // 10s
-            greetingTimeout: 10000,
-            socketTimeout: 20000,
-            // Force IPv4 in case IPv6 causes hangs on your host:
-            family: 4,
-        });
 
-        const mailOptions = {
-            from: senderEmail,
+        const { data, error } = await resend.emails.send({
+            from: 'Portfolio Contact <onboarding@resend.dev>',
             to: recipientEmail,
             replyTo: email,
             subject: subject,
             text: `Sender's Email: ${email}\n\nMessage:\n${message}`
-        };
+        });
 
-        const info = await transporter.sendMail(mailOptions);
-        console.log('Email sent:', info.response);
+        if (error) {
+            throw new Error(error.message || 'Resend API error');
+        }
+
+        console.log('Email sent:', data.id);
         res.status(200).json({ message: 'Email successfully sent' });
 
     } catch (error) {
