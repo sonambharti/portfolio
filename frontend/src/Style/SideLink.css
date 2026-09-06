@@ -59,6 +59,27 @@
 
 @media (max-width: 640px) {
     .sidelink {
+        padding: 0 10px;
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+
+    .link-a {
+        font-size: 15px;
+    }
+
+    .sidelink ul li {
+        margin: 6px 0;
+    }
+
+    .left-sideline,
+    .right-sideline {
+        height: 60px;
+    }
+}
+
+@media (max-width: 380px) {
+    .left-sideline,
+    .right-sideline {
         display: none;
     }
 }

@@ -70,6 +70,12 @@
     }
 }
 
+@media (max-width: 640px) {
+    .home-portrait {
+        display: none;
+    }
+}
+
 .home-eyebrow {
     display: inline-block;
     font-family: var(--font-mono);
